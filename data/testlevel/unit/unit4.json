@@ -1,0 +1,442 @@
+[
+  {
+    "idComponent": "1",
+    "testsets": [
+      {
+        "idTestset": "1",
+        "title": "ts1",
+        "testsuites": [
+          {
+            "idTestsuite": "1",
+            "testcases": [
+              {
+                "idTestcase": "1",
+                "title": "tc1",
+                "result": "not executed",
+                "isFlaky": "true"
+              },
+              {
+                "idTestcase": "2",
+                "title": "tc2",
+                "result": "failed",
+                "isFlaky": "false"
+              }
+            ]
+          },
+          {
+            "idTestsuite": "2",
+            "testcases": [
+              {
+                "idTestcase": "3",
+                "title": "tc3",
+                "result": "passed",
+                "isFlaky": "false"
+              },
+              {
+                "idTestcase": "4",
+                "title": "tc4",
+                "result": "not executed",
+                "isFlaky": "false"
+              }
+            ]
+          }
+        ],
+        "testcases": [
+          {
+            "idTestcase": "5",
+            "title": "tc5",
+            "result": "passed",
+            "isFlaky": "true"
+          }
+        ]
+      },
+      {
+        "idTestset": "2",
+        "title": "ts2",
+        "testcases": [
+          {
+            "idTestcase": "9",
+            "title": "tc9",
+            "result": "failed",
+            "isFlaky": "true"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idComponent": "2",
+    "testsets": [
+      {
+        "idTestset": "3",
+        "testcases": [
+          {
+            "idTestcase": "7",
+            "title": "tc7",
+            "result": "passed",
+            "isFlaky": "false"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idComponent": "3",
+    "testsets": [
+      {
+        "idTestset": "1",
+        "title": "ts1",
+        "testsuites": [
+          {
+            "idTestsuite": "1",
+            "testcases": [
+              {
+                "idTestcase": "1",
+                "title": "tc1",
+                "result": "not executed",
+                "isFlaky": "true"
+              },
+              {
+                "idTestcase": "2",
+                "title": "tc2",
+                "result": "failed",
+                "isFlaky": "false"
+              }
+            ]
+          },
+          {
+            "idTestsuite": "2",
+            "testcases": [
+              {
+                "idTestcase": "3",
+                "title": "tc3",
+                "result": "passed",
+                "isFlaky": "false"
+              },
+              {
+                "idTestcase": "4",
+                "title": "tc4",
+                "result": "not executed",
+                "isFlaky": "false"
+              }
+            ]
+          }
+        ],
+        "testcases": [
+          {
+            "idTestcase": "5",
+            "title": "tc5",
+            "result": "passed",
+            "isFlaky": "true"
+          }
+        ]
+      },
+      {
+        "idTestset": "2",
+        "title": "ts2",
+        "testcases": [
+          {
+            "idTestcase": "9",
+            "title": "tc9",
+            "result": "failed",
+            "isFlaky": "true"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idComponent": "4",
+    "testsets": [
+      {
+        "idTestset": "1",
+        "title": "ts1",
+        "testsuites": [
+          {
+            "idTestsuite": "1",
+            "testcases": [
+              {
+                "idTestcase": "1",
+                "title": "tc1",
+                "result": "not executed",
+                "isFlaky": "true"
+              },
+              {
+                "idTestcase": "2",
+                "title": "tc2",
+                "result": "failed",
+                "isFlaky": "false"
+              }
+            ]
+          },
+          {
+            "idTestsuite": "2",
+            "testcases": [
+              {
+                "idTestcase": "3",
+                "title": "tc3",
+                "result": "passed",
+                "isFlaky": "false"
+              },
+              {
+                "idTestcase": "4",
+                "title": "tc4",
+                "result": "not executed",
+                "isFlaky": "false"
+              }
+            ]
+          }
+        ],
+        "testcases": [
+          {
+            "idTestcase": "5",
+            "title": "tc5",
+            "result": "passed",
+            "isFlaky": "true"
+          }
+        ]
+      },
+      {
+        "idTestset": "2",
+        "title": "ts2",
+        "testcases": [
+          {
+            "idTestcase": "9",
+            "title": "tc9",
+            "result": "failed",
+            "isFlaky": "true"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idComponent": "5",
+    "testsets": [
+      {
+        "idTestset": "4",
+        "title": "ts4",
+        "testcases": [
+          {
+            "idTestcase": "4",
+            "title": "tc4",
+            "result": "passed",
+            "isFlaky": "false"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idComponent": "9",
+    "testsets": [
+      {
+        "idTestset": "4",
+        "title": "ts4",
+        "testcases": [
+          {
+            "idTestcase": "4",
+            "title": "tc4",
+            "result": "passed",
+            "isFlaky": "false"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idComponent": "10",
+    "testsets": [
+      {
+        "idTestset": "1",
+        "title": "ts1",
+        "testsuites": [
+          {
+            "idTestsuite": "1",
+            "testcases": [
+              {
+                "idTestcase": "1",
+                "title": "tc1",
+                "result": "not executed",
+                "isFlaky": "true"
+              },
+              {
+                "idTestcase": "2",
+                "title": "tc2",
+                "result": "failed",
+                "isFlaky": "false"
+              }
+            ]
+          },
+          {
+            "idTestsuite": "2",
+            "testcases": [
+              {
+                "idTestcase": "3",
+                "title": "tc3",
+                "result": "passed",
+                "isFlaky": "false"
+              },
+              {
+                "idTestcase": "4",
+                "title": "tc4",
+                "result": "not executed",
+                "isFlaky": "false"
+              }
+            ]
+          }
+        ],
+        "testcases": [
+          {
+            "idTestcase": "5",
+            "title": "tc5",
+            "result": "passed",
+            "isFlaky": "true"
+          }
+        ]
+      },
+      {
+        "idTestset": "2",
+        "title": "ts2",
+        "testcases": [
+          {
+            "idTestcase": "9",
+            "title": "tc9",
+            "result": "failed",
+            "isFlaky": "true"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idComponent": "13",
+    "testsets": [
+      {
+        "idTestset": "1",
+        "title": "ts1",
+        "testsuites": [
+          {
+            "idTestsuite": "1",
+            "testcases": [
+              {
+                "idTestcase": "1",
+                "title": "tc1",
+                "result": "not executed",
+                "isFlaky": "true"
+              },
+              {
+                "idTestcase": "2",
+                "title": "tc2",
+                "result": "failed",
+                "isFlaky": "false"
+              }
+            ]
+          },
+          {
+            "idTestsuite": "2",
+            "testcases": [
+              {
+                "idTestcase": "3",
+                "title": "tc3",
+                "result": "passed",
+                "isFlaky": "false"
+              },
+              {
+                "idTestcase": "4",
+                "title": "tc4",
+                "result": "not executed",
+                "isFlaky": "false"
+              }
+            ]
+          }
+        ],
+        "testcases": [
+          {
+            "idTestcase": "5",
+            "title": "tc5",
+            "result": "passed",
+            "isFlaky": "true"
+          }
+        ]
+      },
+      {
+        "idTestset": "2",
+        "title": "ts2",
+        "testcases": [
+          {
+            "idTestcase": "9",
+            "title": "tc9",
+            "result": "failed",
+            "isFlaky": "true"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idComponent": "12",
+    "testsets": [
+      {
+        "idTestset": "1",
+        "title": "ts1",
+        "testsuites": [
+          {
+            "idTestsuite": "1",
+            "testcases": [
+              {
+                "idTestcase": "1",
+                "title": "tc1",
+                "result": "not executed",
+                "isFlaky": "true"
+              },
+              {
+                "idTestcase": "2",
+                "title": "tc2",
+                "result": "failed",
+                "isFlaky": "false"
+              }
+            ]
+          },
+          {
+            "idTestsuite": "2",
+            "testcases": [
+              {
+                "idTestcase": "3",
+                "title": "tc3",
+                "result": "passed",
+                "isFlaky": "false"
+              },
+              {
+                "idTestcase": "4",
+                "title": "tc4",
+                "result": "not executed",
+                "isFlaky": "false"
+              }
+            ]
+          }
+        ],
+        "testcases": [
+          {
+            "idTestcase": "5",
+            "title": "tc5",
+            "result": "passed",
+            "isFlaky": "true"
+          }
+        ]
+      },
+      {
+        "idTestset": "2",
+        "title": "ts2",
+        "testcases": [
+          {
+            "idTestcase": "9",
+            "title": "tc9",
+            "result": "failed",
+            "isFlaky": "true"
+          }
+        ]
+      }
+    ]
+  }
+]

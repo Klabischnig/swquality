@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<title>Testquality</title>
+<head>
+<!-- include the css stylesheet -->
+<link rel="stylesheet" type="text/css" href="ss_tq.css" media="screen">
+
+<!-- load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="myTreemap.js"></script>
+<script src="testsetFunctions.js"></script>
+<script src="buttonFunctions.js"></script>
+
+</head>
+
+
+
+<header class="header">
+<center><h1>TESTQUALITY</h1>
+<h2><a href="productquality.html"> &#x2192; PRODUCTQUALITY</a></h2></center>
+</header>
+
+<body>
+<div id="unit"> 
+<button class="myButton" type="button" id="btn_close_unit">Close</button>
+<div id="unit_rect"></div>
+<div id="testset_unit"></div>
+</div>
+
+<div id="system"> 
+<button class="myButton" type="button" id="btn_close_system">Close</button>
+<div id="system_rect"></div>
+<div id="testset_system"></div>
+</div>
+
+<div id="integration">
+<button class="myButton" type="button" id="btn_close_integration">Close</button>
+<div id="integration_rect"></div>
+<div id="testset_integration"></div>
+</div>
+
+<div id="acceptance">
+<button class="myButton" type="button" id="btn_close_acceptance">Close</button>
+<div id="acceptance_rect"></div>
+<div id="testset_acceptance"></div>
+</div>
+
+<!-- slider for testexecutions -->
+<center>
+<div id="slider_execution" >
+   <button class="myButton" type="button" id="btn_play">Play</button>
+   
+    <input type="range"class="slider" id="range_execution">
+    <button class="myButton" type="button" id="btn_flaky">Show Flaky-Tests</button>
+
+  <details>
+  <summary>Testexecution: <span id="value_execution"></span></summary>
+	<p>Timestamp (Testexecution): <span id="testTimestamp"></span></p>
+	<p>Release ID: <span id="idRelease"></span></p>
+	<p>Timestamp (Release): <span id="releaseTimestamp"></span></p>
+	<p>Version: <span id="version"></span></p>
+	
+</details>
+
+</div>
+</center>
+</body>
+
+<script>
+
+
+function hideTestsets(){
+	//hide elements close buttons and information of testsets
+	document.getElementById("btn_close_unit").style.display="none";
+	document.getElementById("testset_unit").style.display="none";
+	document.getElementById("btn_close_system").style.display="none";
+	document.getElementById("testset_system").style.display="none";
+	document.getElementById("btn_close_integration").style.display="none";
+	document.getElementById("testset_integration").style.display="none";
+	document.getElementById("btn_close_acceptance").style.display="none";
+	document.getElementById("testset_acceptance").style.display="none";
+}
+
+hideTestsets();
+
+function showComponents(){
+	testlevel = ["unit", "system", "integration", "acceptance"]
+	for (i in testlevel) {
+		buttonClose(testlevel[i])
+	}
+}
+
+/* set the right values(execution) at the execution slider */
+function updateSlider(current_execution, data){
+	document.getElementById("range_execution").value = current_execution;
+	value_execution.innerHTML = current_execution;
+	testTimestamp.innerHTML = data.testexecutionStamp;
+	idRelease.innerHTML = parseInt(data.idRelease);
+	releaseTimestamp.innerHTML = data.releaseStamp;
+	version.innerHTML = data.version;
+}
+
+//set the dimensions and margins of the graph
+var margin = {top: 0, right: 10, bottom: 10, left: 10}, 
+	width = 750 - margin.left - margin.right, 
+	height = 250 - margin.top - margin.bottom;
+
+//append the svg object to the body of the page
+var svg_unit = newTreemap("unit", width, height, margin)
+var svg_system = newTreemap("system", width, height, margin)
+var svg_integration = newTreemap("integration", width, height, margin)
+var svg_acceptance = newTreemap("acceptance", width, height, margin)
+	
+/* create a tooltip */
+var tool = d3.select("body").append("div").attr("class", "tooltip");
+var selected_component;
+
+
+d3.json("./data/testexecution.json", function(data_executions) {
+	
+	/* define first and last testexecution */
+	var executions = [];
+	for (i in data_executions){
+		x = parseInt(data_executions[i].idTestexecution);
+		executions.push(x);
+	}
+	var min_execution = d3.min(executions);
+	var max_execution = d3.max(executions);
+
+	/* define current testexecution id,
+	 * start with the last testexecution */
+	var current_execution = max_execution;
+	
+	/* set the values of the testexecution slider and outputs */
+	document.getElementById("range_execution").min = min_execution;
+	document.getElementById("range_execution").max = max_execution;
+	document.getElementById("value_execution").value = current_execution;
+	
+
+	/* init slider */
+	updateSlider(current_execution, data_executions[current_execution-1]);
+	
+	/***********************************  listen for update ******************************************************************/
+	
+
+	/* listen on execution slider input */
+	var slider_execution = document.getElementById("range_execution");
+	d3.select("#range_execution").on("input", function () {
+		current_execution = slider_execution.value;
+		updateSlider(current_execution, data_executions[current_execution-1]);
+		updateTreemaps(current_execution);
+		hideTestsets();
+		showComponents();
+	})
+	
+	/* listen on play button */
+	var play_timer; 
+	var playButton = d3.select("#btn_play");
+	/* change text of button (Play, Pause) */
+	playButton.on("click", function() {	
+		var button = d3.select(this);
+		/* stop playing */
+		if(button.text() == "Pause"){
+			button.text("Play");
+			play_timer.stop();
+		}
+		/* play */
+		else {
+			button.text("Pause")
+			play_timer = d3.timer(updateExecution, 2500);
+		}
+	})
+	
+	/*if play button was pressed */
+	function updateExecution(){
+		/* if execution slider reaches the end (last execution - start again) */
+		if(current_execution == max_execution){
+			current_execution = 1;
+		}
+		else {
+			current_execution++;
+		}
+		
+		updateSlider(current_execution, data_executions[current_execution-1]);
+		updateTreemaps(current_execution);
+		hideTestsets();
+		showComponents();
+		play_timer.restart(updateExecution, 2500);
+	}
+	
+	/** listen on flaky button */
+	var flaky_timer; 
+	var flaky_button = d3.select("#btn_flaky");
+	flaky_button.on("click", function(){
+		
+		if(flaky_button.text() == "Stop Flaky Tests"){
+			flaky_button.text("Show Flaky Tests");
+			d3.selectAll("rect").transition().duration(250).style("opacity",1);
+			flaky_timer.stop();
+		}
+		
+		else {
+			flaky_button.text("Stop Flaky Tests");
+			flaky_timer = d3.timer(lightUp, 1000);
+			
+		}
+	})
+	
+	function lightUp() {
+		var testlevel = ["unit","system","integration","acceptance"]
+
+		current_execution = slider_execution.value;
+
+		for (i in testlevel) {
+			d3.select("#"+testlevel[i]+"_rect > svg")
+			.selectAll("rect")
+			.transition()
+				.duration(500)
+				.style("opacity", function (d) {
+					
+					var flakynessIn = d.data.hasFlakyTests
+					if (flakynessIn && flakynessIn.includes(testlevel[i])){
+						return .2;
+					}
+				})
+		  	.transition()
+		  	.duration(500)
+		  	.style("opacity",1);
+			
+			d3.select("#testset_"+testlevel[i])
+				.selectAll(".arc")
+				.transition()
+				.duration(500)
+				.style("opacity", function (d) {
+						if (d.data.value.isFlaky == "true"){
+							return .2;
+						}	
+					})
+			  	.transition()
+			  	.duration(500)
+			  	.style("opacity",1);
+			
+			flaky_timer.restart(lightUp, 1000);	
+		}
+	}
+	
+	
+
+	/**************************************** init ******************************************************************/ 
+	
+	updateTreemaps(current_execution);
+	
+	/*************************************** update ******************************************************************/
+
+	/* update all treemaps */
+	function updateTreemaps(current_execution){
+		d3.selectAll("rect").remove();
+		
+		/* read json data of current test execution */
+		var current_release = parseInt(document.getElementById("idRelease").innerText)
+		var current_testexecution = parseInt(document.getElementById("value_execution").innerText)
+		d3.json("./data/testquality/release"+current_release+"_ex"+current_testexecution+".json", function(data_releases) {
+			
+			/* define root of hierarchical data (components)*/
+		 	var root = d3.hierarchy(data_releases)
+		 		.sum(function(d){ return 1 })
+			/* plot the components */
+			svg_unit = updateTreemap(current_execution, root, "unit", svg_unit, width, height);
+		 	svg_system = updateTreemap(current_execution, root, "system", svg_system, width, height);
+		 	svg_integration = updateTreemap(current_execution, root, "integration", svg_integration, width, height);
+		 	svg_acceptance = updateTreemap(current_execution, root, "acceptance", svg_acceptance, width, height);
+		 
+		 	
+		 	//if close button was pressed - hide button again, and show the overview of the components
+		 	d3.select("#btn_close_unit").on("click", function(){
+				buttonClose("unit")
+			})	
+		 	d3.select("#btn_close_system").on("click", function(){
+				buttonClose("system")
+			})	
+			d3.select("#btn_close_integration").on("click", function(){
+				buttonClose("integration")
+			})	
+			d3.select("#btn_close_acceptance").on("click", function(){
+				buttonClose("acceptance")
+			})	
+		})	
+	}
+})//end reading testexecution data
+
+function showTestsets(current_execution, component, testdata, level){
+	var testsets = null;
+	if (testdata){
+		testsets = getTestsets(testdata, component)
+	}
+	 
+	d3.select("#testset_"+level).selectAll("svg").remove();
+  
+	for (i in testsets){
+		
+		var testsuites = getTestsuites(testsets[i])
+		var testcases = getTestcases(testsets[i])
+
+		var data_testcases = []
+		for (j in testcases){
+			data_testcases.push(testcases[j])
+		}
+		for (j in testsuites) {
+			for (k in testsuites[j].testcases) {
+				data_testcases.push(testsuites[j].testcases[k])
+			}
+		}
+		//TODO: switch between ts and tc view
+		svg_pie = createPiecharts(150, 150, 40, testsets[i], level, data_testcases);
+	}		
+}
+
+function show_testset_information(testset) {
+	this.idTestset = testset.idTestset;
+    this.testset = testset;
+    var wnd = window.open("./testset.html","");
+}
+
+
+
+</script>
+
+</body>
+</html>

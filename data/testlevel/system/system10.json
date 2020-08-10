@@ -1,0 +1,73 @@
+[
+  {
+    "idComponent": "1"
+  },
+  {
+    "idComponent": "2"
+  },
+  {
+    "idComponent": "3"
+  },
+  {
+    "idComponent": "4",
+    "children": [
+      {
+        "idTestset": "1",
+        "title": "ts1",
+        "testsuites": [
+          {
+            "idTestsuite": "1",
+            "testcases": [
+              {
+                "idTestcase": "1",
+                "title": "tc1",
+                "result": "not executed"
+              },
+              {
+                "idTestcase": "2",
+                "title": "tc2",
+                "result": "failed"
+              }
+            ]
+          },
+          {
+            "idTestsuite": "2",
+            "testcases": [
+              {
+                "idTestcase": "3",
+                "title": "tc3",
+                "result": "passed"
+              },
+              {
+                "idTestcase": "4",
+                "title": "tc4",
+                "result": "not executed"
+              }
+            ]
+          }
+        ],
+        "testcases": [
+          {
+            "idTestcase": "5",
+            "title": "tc5",
+            "result": "passed"
+          }
+        ]
+      },
+      {
+        "idTestset": "2",
+        "title": "ts2",
+        "testcases": [
+          {
+            "idTestcase": "9",
+            "title": "tc9",
+            "result": "failed"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idComponent": "5"
+  }
+]

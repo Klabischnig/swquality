@@ -1,0 +1,174 @@
+html, body{
+	width: 100%; 
+	height: 100%; 
+	padding: 0; 
+	margin: 0;
+	background-color: #ffffff;
+   	font-family: 'Roboto',sans-serif;}
+     
+.header {
+	padding-top: 1em;
+    height: 60px;
+}
+
+h1 {
+	font-size: 2em;
+	display:inline;
+}
+h2 {
+	font-size: 1em;
+}
+
+div{position: absolute; padding: 1em;}
+#components{top: 10%; left: 0%; right: 80%; bottom: 0%;
+ width: 80%;}
+#buttons{top: 70%; left: 0%; right: 0%; bottom: 0%}
+#slider_coverage{top: 76%; left: 0%; right: 0%; bottom: 0%}
+#slider_release{top: 86%; left: 0%; right: 0%; bottom: 0%}
+#config_panel{top: 37%; left: 80%; right: 5%; bottom: 0%}
+.header {
+    height: 60px;
+}
+
+.components{
+	text-align: center;
+}
+
+.tooltip {
+	position: absolute;
+	display: none;
+	width: auto;
+	height: auto;
+	background: white;
+	border: 0 none;
+	border-radius: 8px 8px 8px 8px;
+	box-shadow: -3px 3px 15px #888888;
+	color: black;
+	font: 12px sans-serif;
+	padding: 5px;
+	text-align: left;
+}
+
+/************************* link *************************/
+
+/* unvisited link */
+a:link {
+  color: grey;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: grey;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+  background-color: grey;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+
+/************************* button *************************/
+
+.buttons{
+	text-align: center;
+}
+
+.myButton {
+	width: 9%;
+	background-color:#d3d3d3;
+	border-radius:6px;
+	border:1px solid #c0c0c0;
+	display:inline-block;
+	cursor:pointer;
+	color: #000;
+	font-size:15px;
+	padding:6px 24px;
+	opacity:0.7;
+}
+.myButton:hover {
+	opacity:1;
+}
+.myButton:active {
+	top:1px;
+	opacity:1;
+}
+
+
+/************************* slider *************************/
+.slider {
+  -webkit-appearance: none;
+  width: 500px;
+  height: 10px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  width: 50%;
+  
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 5px;
+  border:1px solid #d3d3d3;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4B0082;
+  cursor: pointer;
+}
+
+/************************* table *************************/
+#config_table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#config_table td, #config_table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  vertical-align: bottom;
+}
+
+#config_table tr:nth-child(odd){
+	background: rgba(255,255,0,0.5)
+}
+#config_table tr:nth-child(even){
+	background: rgba(195, 0, 0, 0.5);
+}
+
+#low_risk {
+	background: rgba(255, 255, 0, 0.2);
+}
+
+#high_risk {
+	background: rgba(195, 0, 0, 0.2);
+}
+
+summary:hover{
+	background: #dfdfdf;
+	border: none;
+}
+summary{
+	outline:none;
+}

@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- https://www.youtube.com/watch?v=2ITWw2UlNhE -->
+<!-- include the css stylesheet -->
+<link rel="stylesheet" type="text/css" href="ss_ts.css" media="screen">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Color scale -->
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<header>
+<h1 id="idTestset"></h1>
+</header>
+<body>
+<p id="testset"></p>
+
+<h2>Testsuites</h2>
+<div id="list_suites">
+<ul></ul>
+</div>
+
+<h2>Testcases without a testsuite</h2>
+<div id="list_cases">
+<ul></ul>
+</div>
+
+</body>
+<script>
+
+//show selected testset id in header
+display("Testset: " + window.opener.idTestset);
+function display(idTestset) {
+    document.getElementById("idTestset").innerHTML = String(idTestset);
+   
+}
+
+//get testset from previous window
+var testset = window.opener.testset;
+
+//show list of testcases within a testsuite
+var suite_parent = d3.select("#list_suites").select("ul");
+if (testset.testsuites){
+	var suites_list = suite_parent.selectAll("li")
+	    .data(testset.testsuites)
+	    .enter()
+	    .append("li")
+	    .text(function (d) {return "Testsuite: "+d.idTestsuite})
+	    .append("ul")
+	    .selectAll("li")
+	    .data(function (d) { return d.testcases})
+		.enter()
+		.append("li")
+		.text(function (d, i) {return "Testcase: " + d.idTestcase})
+		.on("click", expand);
+}
+	
+//show list of testcases without a testsuite
+var cases_parent = d3.select("#list_cases").select("ul");
+if(testset.testcases) {
+	var cases_list = cases_parent.selectAll("li")
+	    .data(testset.testcases)
+	    .enter()
+	    .append("li")
+	    .text(function (d) {return "Testcase: " + d.idTestcase})
+	    .on("click", expand);
+}    
+function expand(){
+	d3.select(this)
+	.on("click", collapse)
+	.append("ul")
+	.selectAll("li")
+	.data(function (d, i) {
+        return d3.values(d)
+    })
+    .enter()
+    .append("li")
+    .text(function (d,i) {
+    	return d})
+	
+}
+function collapse(){
+	d3.select(this)
+	.on("click", expand)
+	     .select("ul")
+	     .remove();
+}
+</script>

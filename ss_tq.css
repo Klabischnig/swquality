@@ -1,0 +1,175 @@
+html, body{
+	width: 100%; 
+	height: 100%; 
+	padding: 0; 
+	margin: 0;
+	background-color: #ffffff;
+   	font-family: 'Roboto',sans-serif;}
+     
+.header {
+	padding-top: 1em;
+    height: 60px;
+}
+
+h1 {
+	font-size: 2em;
+	display:inline;
+}
+h2 {
+	font-size: 1em;
+}
+   
+
+  
+/************************* link *************************/
+
+/* unvisited link */
+a:link {
+  color: grey;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: grey;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+  background-color: grey;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+
+div{position: absolute; padding: 1em;}
+#unit{top: 14%; left: 0; right: 50%; bottom: 50%}
+#system{top: 14%; left: 50%; right: 0; bottom: 50%}
+#integration{top: 50%; left: 0; right: 50%; bottom: 14%}
+#acceptance{top: 50%; left: 50%; right: 0; bottom: 14%}
+#slider_execution{top:86%; left: 0; right: 0; bottom: 0%}
+
+/************************* button *************************/
+
+.buttons{
+	text-align: center;
+}
+
+.myButton {
+	width: 140px;
+	background-color:#d3d3d3;
+	border-radius:6px;
+	border:1px solid #c0c0c0;
+	display:inline-block;
+	cursor:pointer;
+	color: #000;
+	font-size:15px;
+	padding:6px 24px;
+	opacity:0.7;
+}
+.myButton:hover {
+	opacity:1;
+}
+.myButton:active {
+	top:1px;
+	opacity:1;
+}
+
+/************************* slider *************************/
+.slider {
+  -webkit-appearance: none;
+  width: 500px;
+  height: 10px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 5px;
+  border:1px solid #d3d3d3;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4B0082;
+  cursor: pointer;
+}
+
+.tooltip {
+	position: absolute;
+	display: none;
+	width: auto;
+	height: auto;
+	background: white;
+	border: 0 none;
+	border-radius: 8px 8px 8px 8px;
+	box-shadow: -3px 3px 15px #888888;
+	color: black;
+	font: 12px sans-serif;
+	padding: 5px;
+	text-align: left;
+}
+
+#testset_unit {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#testset_unit svg:hover{
+	transform: scale(1.2);
+	z-index: 100;
+	opacity: 1;
+	transition: transform 0.4s;
+}
+
+
+#testset_system svg:hover{
+	transform: scale(1.2);
+	z-index: 100;
+	opacity: 1;
+	transition: transform 0.4s;
+}
+
+
+#testset_integration svg:hover{
+	transform: scale(1.2);
+	z-index: 100;
+	opacity: 1;
+	transition: transform 0.4s;
+}
+
+
+#testset_acceptance svg:hover{
+	transform: scale(1.2);
+	z-index: 100;
+	opacity: 1;
+	transition: transform 0.4s;
+}
+
+
+summary:hover{
+	background: #dfdfdf;
+	border: none;
+}
+summary{
+	outline:none;
+}

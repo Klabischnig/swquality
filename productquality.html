@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<title>Productquality</title>
+<head>
+
+<!-- include the css stylesheet -->
+<link rel="stylesheet" type="text/css" href="ss_pq.css" media="screen">
+
+<!-- load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+</head>
+
+<body>
+
+<header class="header">
+<center><h1>PRODUCTQULALITY</h1>
+<h2><a href="testquality.html"> &#x2192; TESTQUALITY</a></h2></center>
+</header>
+
+<!-- treemap of components -->
+<div id="components" class="components"></div>
+
+<div class="buttons" id="buttons">
+<button style="text-align:center", id="btn_showCoverage" type="button" class="myButton">Show Testcoverage</button>
+<button id="btn_showDefects" type="button" class="myButton">Show Defects</button>
+</div>
+
+<!-- slider for coverage -->
+<center>
+<div class="slider_coverage" id="slider_coverage">
+	<p>Test-Coverage &lt; <span id="value_coverage"></span> %</p>	
+	<span class="leftlabel">0 %</span>
+    <input id ="range_coverage" type="range" class="slider" min="0" max="100" value="0" style="margin-bottom: 10px;"/>
+    <span class="rightlabel">100 %</span>
+</div>
+</center>
+
+<!-- slider for releases -->
+<center>
+<div id="slider_release" class="slider_release">
+    <button class="myButton" type="button" id="btn_play">Play</button>
+    <br>
+    <input type="range"class="slider" id="range_release">
+    
+<details>
+  <summary>Version: <span id="value_version"></summary>
+   	<p> Release ID: <span id="value_release"></span></span></p>
+	<p> Timestamp: <span id="value_timestamp"></span></p>
+</details>
+</div>
+
+<div id="config_panel" class="config_panel">
+<table id="config_table">
+	<tr>
+	<th><lable>low risk:</lable></th>
+	<th>
+	<input id ="low_risk" type="number" min="1"  value="5" ></th>
+	</tr>
+	
+	<tr>
+	<th><lable>high risk:</lable></th>
+	<th><input id ="high_risk" type="number" min="1" value="10" /></th>
+	</tr> 
+</table>    
+</div>
+
+<script>
+
+<!-- treemap -->
+/* set the dimensions and margins of the treemap (components) */
+var margin = {top: 10, right: 10, bottom: 10, left: 10},
+	width = 1000 - margin.left - margin.right,
+	height = 445 - margin.top - margin.bottom;
+	
+/* append the svg object to the body of the page */
+var svg_components = d3.select("#components")
+	.append("svg")
+  	.attr("width", width + margin.left + margin.right)
+  	.attr("height", height + margin.top + margin.bottom)
+	.append("g")
+  	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+/* define color scale green and red */
+function color (number_of_defects){
+	var low_risk = parseInt(d3.select("#low_risk").property("value"));
+	var high_risk = parseInt(d3.select("#high_risk").property("value"));
+	
+	if (number_of_defects < low_risk) {
+		return ("#00b300");//green 
+	}
+	else if (number_of_defects >= low_risk && number_of_defects < high_risk){
+		return ("yellow");
+	}
+	else if (number_of_defects >= high_risk) {
+		return ("#c30000");//red
+	}
+}
+	
+/* define variable for the views show coverage and show defects */
+var view_coverage = false;
+
+<!-- testcoverage slider -->
+/* set variables slider for coverage */
+var slider_coverage = document.getElementById("range_coverage");
+var output_coverage = document.getElementById("value_coverage");
+output_coverage.innerHTML = slider_coverage.value;
+slider_coverage.oninput = function (){
+	output_coverage.innerHTML = this.value;
+}
+
+/* return 1 if the coverage of one component is higher than 
+ * the selected coverage with the range slider */
+function coverage_slider (testcoverage) {
+	slider = parseInt(d3.select("#range_coverage").property("value"));
+	if (testcoverage >= slider) return 1;
+	else if (testcoverage < slider) return 0;
+}
+
+<!-- configuration panel --> 
+/* find maximum of possible defects of one component in the right release for the configuration panel */
+function update_config_panel (current_release, root){
+	var all_defects = [];
+	for (i in root.leaves()){
+		all_defects.push(parseInt(root.leaves()[i].data.numberOfDefects));
+	}
+	var max_defects = d3.max(all_defects)
+	document.getElementById("low_risk").max = max_defects;
+	document.getElementById("high_risk").max = max_defects;	
+}
+
+<!-- tooltip -->
+/* create a tooltip */
+var tool = d3.select("body").append("div").attr("class", "tooltip");
+
+/* change the tooltip when moving over cell */
+var mouseover_component = function(d) {
+	d3.select(this)
+	 	.style("stroke", "black")
+	  	.style("stroke-width", 2);
+	tool.style("left", d3.event.pageX + 10 + "px");
+    tool.style("top", d3.event.pageY - 20 + "px");
+    tool.style("display", "inline-block");
+	tool.html(d.data.title+"<br>"
+			+"subsystem: " + d.data.subsystem + "<br>"
+			+"defects: " + d.data.numberOfDefects + "<br>"
+			+"testcoverage: " + d.data.testcoverage +"%");
+}
+
+/* change the tooltip when leaving a cell */
+var mouseleave_component = function(d) {
+	d3.select(this)
+		.style("stroke-width", 1);
+	tool.style("display", "none");
+}
+
+  	
+/* read the data of releases */
+d3.json("./data/systemrelease.json", function(data_release) {
+	
+	/* define first and last release */
+	var releases = [];
+	for (i in data_release){
+		x = data_release[i].idRelease;
+		releases.push(x);
+	}
+	
+	var min_release = d3.min(releases);
+	var max_release = d3.max(releases);
+	
+	/* define current release number,
+	 * start with the last release */
+	var current_release = max_release;
+	
+	/* set the values of the release slider */
+	document.getElementById("range_release").min = min_release;
+	document.getElementById("range_release").max = max_release;
+	document.getElementById("range_release").value = max_release;
+
+	/* set release id in slider and define variables*/
+	var slider_release = document.getElementById("range_release");
+	var output_release = document.getElementById("value_release");
+	
+	/* get variables of release data */
+	function getTimestamp(current_release) {
+		return data_release[current_release-1].stamp;
+	}
+	function getVersion(current_release) {
+		return data_release[current_release-1].version;
+		
+	}
+	
+	var value_timestamp = document.getElementById("value_timestamp");
+	value_timestamp.innerHTML = getTimestamp(current_release);
+	
+	var value_version = document.getElementById("value_version");
+	value_version.innerHTML = getVersion(current_release);
+	
+	/* set the right value (release) at the range slider */
+	function updateSlider(release){
+		document.getElementById("range_release").value = release;
+		output_release.innerHTML = slider_release.value;
+		slider_release.oninput = function ()  {
+			output_release.innerHTML = this.value;
+		}
+	}
+	
+	
+	/**************************************** init ******************************************************************/ 
+	updateTreemap(current_release);
+	/****************************************************************************************************************/
+	
+	
+ 	/***********************************  listen for update ******************************************************************/
+	
+ 	<!-- Testcoverage or Defects View -->
+	/* click the button to show the coverage */
+	d3.select("#btn_showCoverage").on("click", function () {
+		view_coverage = true;
+		updateTreemap(current_release);  				
+	});
+	
+	/* click the button to show the defects */
+	d3.select("#btn_showDefects").on("click", function () {
+		view_coverage = false;
+		updateTreemap(current_release);
+	});
+	
+	/* change testcoverage on slider */
+	d3.select("#range_coverage").on("input", function () {
+		updateTreemap(current_release);
+	});
+		
+	/* press play button */
+	<!-- play button -->
+	var t; //timer
+	var playButton = d3.select("#btn_play");
+	
+	/* change text of button (Play, Pause) */
+	playButton.on("click", function() {	
+		var button = d3.select(this);
+		
+		/* stop playing */
+		if(button.text() == "Pause"){
+			button.text("Play");
+			t.stop();
+		}
+		
+		/* play */
+		else {
+			//TODO: oportunity to change velocity
+			button.text("Pause")
+			t = d3.timer(update_release, 2500);
+		}
+	})
+	
+	/*if play button was pressed */
+  	function update_release(){
+  	
+		/* if range slider reaches the end (last release - start again) */
+		if(current_release== max_release){
+			current_release = 1;
+		}
+		else {
+			current_release++;
+		}
+		
+		updateSlider(current_release);
+		updateTreemap(current_release);
+		value_timestamp.innerHTML = getTimestamp(current_release);
+		value_version.innerHTML = getVersion(current_release);
+		
+		t.restart(update_release, 2500);
+  	}
+	
+	<!-- configuration panel -->
+	/* change values in configuration panel */
+	// when the input range changes update value 
+	d3.select("#low_risk").on("input", function() {
+ 		updateTreemap(current_release);
+ 	});
+	d3.select("#high_risk").on("input", function() {
+		updateTreemap(current_release);
+ 	});
+	
+	/* change release on slider */
+	<!-- release slider -->
+ 	/* show the right components of every release */
+	d3.select("#range_release").on("input", function () {
+		current_release = d3.select("#range_release").property("value");
+		value_timestamp.innerHTML = getTimestamp(current_release);
+		value_version.innerHTML = getVersion(current_release);
+		updateTreemap(current_release);
+	})
+		
+
+/**************************************** update ******************************************************************/
+	
+	function updateTreemap(current_release){
+		
+ 		/* read json data of current release */
+		d3.json("./data/productquality/release"+current_release+".json", function(data_components) {
+			
+			/* define root of hierarchical data (components)*/
+		 	var root = d3.hierarchy(data_components)
+		 		.sum(function(d){ return 1 })
+		 	
+		 	/* setup config-panel */
+			update_config_panel(current_release, root);
+		 		
+	 		/* plot the components */
+	 		update_components(current_release, root);
+		})	
+	}
+ 	
+}) //end of reading release data
+
+/* update treemap with components */
+function update_components(current_release, root){
+	
+
+	d3.selectAll("rect").remove();
+	
+	/* position of each element of the hierarchy */
+ 	d3.treemap()
+		.size([width, height])
+  		.paddingTop(28)
+  		.paddingRight(5)
+  		.paddingInner(3)
+  		(root)
+
+	/* add information to rectangles */
+  	svg_components
+    	.selectAll("rect")
+    	.data(root.leaves())
+    	.enter()
+    	.append("rect")
+      		.attr('x', function (d) { return d.x0; })
+      		.attr('y', function (d) { return d.y0; })
+      		.attr('width', function (d) { return d.x1 - d.x0; })
+      		.attr('height', function (d) { return d.y1 - d.y0; })
+      		.style("stroke", "black")
+      		.style("stroke-width", 1)
+      		.style("fill", function(d){ return color(d.data.numberOfDefects)})
+      		.attr("fill-opacity", function (d) {
+      			if (view_coverage) {return d.data.testcoverage/100}
+      			else return 1;
+      		})
+      		.style("opacity", function(d){ return coverage_slider(d.data.testcoverage)})
+      		.on("mouseover", mouseover_component)
+			.on("mouseleave", mouseleave_component);
+      		
+      	
+    d3.selectAll("text").remove();
+    d3.selectAll("vals").remove();
+ 	d3.selectAll("titles").remove();
+    
+  	/** for scaling 
+  	  * if #subcomponents >= 17 
+  	  * or #components >= 100
+  	  * do not add title and text*/
+    if (root.children.length < 18 && root.leaves().length < 62) {
+  		
+		/* add text labels */
+	  	svg_components
+	    	.selectAll("text")
+	    	.data(root.leaves())
+	    	.enter()
+	    	.append("text")
+	      		.attr("x", function(d){ return d.x0+5}) 
+	      		.attr("y", function(d){ return d.y0+20})   
+	      		.text(function(d){ return d.data.idComponent})
+	      		.attr("font-size", "15px")
+	      		.attr("fill", "black")
+     
+		/* add values */
+	    svg_components
+	    	.selectAll("vals")
+		    .data(root.leaves())
+		    .enter()
+		    .append("text")
+		    	.attr("x", function(d){ return d.x0+5})    
+		      	.attr("y", function(d){ return d.y0+35})   
+		      	.text(function(d){ 
+		      		if (view_coverage){
+		      			return d.data.testcoverage + " %"
+		      		}
+		      		else return d.data.numberOfDefects
+		      	})
+		      	.attr("font-size", "11px")
+		      	.attr("fill", "black")
+	      
+	    /* add titles */
+		svg_components
+			.selectAll("titles")
+			.data(root.descendants().filter(function(d){return d.depth==1}))
+			.enter()
+			.append("text")
+				.attr("x", function(d){ return d.x0})
+				.attr("y", function(d){ return d.y0+21})
+				.text(function(d){ return d.data.subsystem })
+				.attr("font-size", "19px")
+				.attr("fill",  "black");
+    }
+}
+
+
+ </script>
+</body>
+</html>
