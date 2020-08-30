@@ -292,9 +292,10 @@ function showTestsets(current_execution, component, testdata, level){
 	var testsets = null;
 	if (testdata){
 		testsets = getTestsets(testdata, component)
-	 
+	}
+	if (testsets) {
 		d3.select("#testset_"+level).selectAll("svg").remove();
-	  
+	  	
 		for (i in testsets){
 			
 			var testsuites = getTestsuites(testsets[i])
