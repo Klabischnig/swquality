@@ -169,9 +169,9 @@ div{position: absolute;text-align: center}
 border-right: 1px dashed black;
 border-bottom: 1px dashed black;
 }
-#buttons{text-align: center; top: 73%; left: 0%; right: 0%; bottom: 0%}
-#slider_coverage{text-align: center; top: 76%; left: 0%; right: 0%; bottom: 0%}
-#slider_release{text-align: center; top: 86%; left: 0%; right: 0%; bottom: 0%}
+#buttons{text-align: center; top: 73%; left: 4%; right: 20%; bottom: 0%}
+#slider_coverage{text-align: center; top: 76%; left: 4%; right: 20%; bottom: 0%}
+#slider_release{text-align: center; top: 86%; left: 4%; right: 20%; bottom: 0%}
 #config_panel{top: 35%; left: 81%; right: 4%; bottom: 0%;
 text-align: center;
 border-bottom: 1px dashed black;}
