@@ -341,12 +341,15 @@ d3.json("./data/testexecution.json", function(data_executions) {
 })//end reading testexecution data
 
 function showTestsets(current_execution, component, testdata, level){
+	
+	d3.select("#testset_"+level).selectAll("svg").remove();
+	
 	var testsets = null;
+	
 	if (testdata){
 		testsets = getTestsets(testdata, component)
 	}
 	if (testsets != null) {
-		d3.select("#testset_"+level).selectAll("svg").remove();
 	  	
 		for (i in testsets){
 			
