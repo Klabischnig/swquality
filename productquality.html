@@ -48,6 +48,19 @@
    	<p> Release ID: <span id="value_release"></span></span></p>
 	<p> Timestamp: <span id="value_timestamp"></span></p>
 </details>
+
+<details>
+	<summary>Edit Data</summary>
+	
+	<form id="myForm">
+	</form>
+	<button class="myButton" type="button" id="btn_enable">Edit</button>
+	<button class="myButton" type="button" id="btn_save">Save</button>
+	<p></p>
+	<button class="myButton" type="button" id="btn_add_data">Add new testresults</button>
+
+</details>
+	
 </div>
 
 <div id="config_panel" class="config_panel">
@@ -66,6 +79,8 @@
 </div>
 
 <script>
+
+var checkboxes = [];
 
 <!-- treemap -->
 /* set the dimensions and margins of the treemap (components) */
@@ -166,17 +181,7 @@ d3.json("./data/systemrelease.json", function(data_release) {
 		releases.push(x);
 	}
 	
-	var min_release = d3.min(releases);
-	var max_release = d3.max(releases);
-	
-	/* define current release number,
-	 * start with the last release */
-	var current_release = max_release;
-	
-	/* set the values of the release slider */
-	document.getElementById("range_release").min = min_release;
-	document.getElementById("range_release").max = max_release;
-	document.getElementById("range_release").value = max_release;
+	updateReleases(releases);
 
 	/* set release id in slider and define variables*/
 	var slider_release = document.getElementById("range_release");
@@ -206,6 +211,48 @@ d3.json("./data/systemrelease.json", function(data_release) {
 		}
 	}
 	
+	/* init checkboxes */
+	for (i in data_release) {
+		lbl_relToShow = createNewElement("LABEL", "lbl_"+data_release[i].idRelease, null)
+		lbl_text = document.createTextNode(data_release[i].idRelease);
+		lbl_relToShow.setAttribute("for", "lblRel");
+		lbl_relToShow.appendChild(lbl_text);
+		document.getElementById("myForm").insertBefore(lbl_relToShow,document.getElementById("lblRel"));		
+
+		cbx_relToShow = createNewElement("INPUT", "cbx_"+data_release[i].idRelease, "CHECKBOX");
+		cbx_relToShow.setAttribute("checked", true);
+		cbx_relToShow.setAttribute("disabled", true);
+		checkboxes.push(cbx_relToShow);
+		document.getElementById("myForm").insertBefore(cbx_relToShow,document.getElementById("cbx_relToShow"));		
+	}	
+	
+	/* enable checkboxes and save new view */
+	d3.select("#btn_enable").on("click", function() {	
+		for ( i in checkboxes){
+			document.getElementById(checkboxes[i].id).disabled = false;
+		}
+		
+		d3.select("#btn_save").on("click", function() {
+			var newReleases = [];
+			for ( i in checkboxes){
+				var checkBox = document.getElementById(checkboxes[i].id);				
+				checkBox.disabled = true;
+				if (checkBox.checked == true){
+					newReleases.push(parseInt(i)+1)
+				}
+				checkboxes[i] = checkBox;	
+			}
+			if (newReleases.length == 0) {
+				alert("Please choose results of one testexecution at least!")
+			}
+			else {
+				releases = newReleases;
+				updateReleases(releases);
+				updateSlider(current_release, data_release[current_release-1]);
+				updateTreemap(current_release);
+			}
+		})
+	})
 	
 	/**************************************** init ******************************************************************/ 
 	updateTreemap(current_release);
@@ -403,6 +450,37 @@ function update_components(current_release, root){
 				.attr("font-size", "19px")
 				.attr("fill",  "black");
     }
+}
+
+d3.select("#btn_add_data")
+.on("click", function(){
+	alert("Please make sure you are logged in at GitHub!");
+	var tab = window.open("https://github.com/Klabischnig/swquality/tree/master/data/testquality", 
+	'_blank');
+	tab.focus();  
+})
+
+function createNewElement (element, id, type) {
+	var el = document.createElement(element);
+	el.setAttribute("id", id)
+	el.setAttribute("type", type);
+	return el;
+}
+
+/* define first and last release */
+function updateReleases(releases) {
+	
+	min_release = d3.min(releases);
+	max_release = d3.max(releases);
+
+	/* define current release id,
+	 * start with the last release */
+	current_release = max_release;
+
+	/* set the values of the release slider */
+	document.getElementById("range_release").min = min_release;
+	document.getElementById("range_release").max = max_release;
+	document.getElementById("range_release").value = max_release;
 }
 
 
