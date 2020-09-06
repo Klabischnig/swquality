@@ -82,7 +82,6 @@
 
 <script>
 
-var witchView = "testquality";
 var executions = [];
 var min_execution = 0;
 var max_execution = 0;
@@ -270,6 +269,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 		}
 	}
 	
+	/* enable checkboxes and save new view */
 	d3.select("#btn_enable").on("click", function() {	
 		for ( i in checkboxes){
 			document.getElementById(checkboxes[i].id).disabled = false;
@@ -408,9 +408,6 @@ function updateExecutions(executions) {
 	document.getElementById("range_execution").max = max_execution;
 	document.getElementById("value_execution").value = current_execution;
 }
-
-
-
 
 
 
