@@ -165,7 +165,7 @@ summary{
 /************************* treemap *************************/
 
 div{position: absolute;text-align: center}
-#components{top: 4%; left: 4%; right: 20%;
+#components{top: 14%; left: 4%; right: 20%;
 border-right: 1px dashed black;
 border-bottom: 1px dashed black;
 }
