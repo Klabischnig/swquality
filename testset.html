@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <meta charset="utf-8">
-<!-- https://www.youtube.com/watch?v=2ITWw2UlNhE -->
 <!-- include the css stylesheet -->
 <link rel="stylesheet" type="text/css" href="ss_ts.css" media="screen">
 
@@ -35,7 +34,6 @@
 display("Testset: " + window.opener.idTestset);
 function display(idTestset) {
     document.getElementById("idTestset").innerHTML = String(idTestset);
-   
 }
 
 //get testset from previous window
@@ -54,6 +52,17 @@ if (testset.testsuites){
 	    .data(function (d) { return d.testcases})
 		.enter()
 		.append("li")
+		.style("background", function (d) {
+			if (d.result == "passed"){
+				return "rgba(0, 179, 0, 0.4)";
+			}
+			if (d.result == "failed"){
+				return "rgba(195, 0, 0, 0.4)";
+			}
+			if (d.result == "not executed"){
+				return "rgba(255, 255, 0, 0.4)";
+			}
+		})
 		.text(function (d, i) {return "Testcase: " + d.idTestcase})
 		.on("click", expand);
 }
@@ -65,6 +74,17 @@ if(testset.testcases) {
 	    .data(testset.testcases)
 	    .enter()
 	    .append("li")
+	    .style("background", function (d) {
+			if (d.result == "passed"){
+				return "rgba(0, 179, 0, 0.4)";
+			}
+			if (d.result == "failed"){
+				return "rgba(195, 0, 0, 0.4)";
+			}
+			if (d.result == "not executed"){
+				return "rgba(255, 255, 0, 0.4)";
+			}
+		})
 	    .text(function (d) {return "Testcase: " + d.idTestcase})
 	    .on("click", expand);
 }    
@@ -79,13 +99,32 @@ function expand(){
     .enter()
     .append("li")
     .text(function (d,i) {
-    	return d})
-	
+    	console.log(d)
+    	console.log(i)
+    	
+    	switch (i) {
+    	case 0:
+    		return "Id: " + d;
+    	case 1:
+    		return "Title: " + d;
+    	case 2:
+    		return "Result: " + d;
+    	case 3:
+    		if (d == "true"){
+	    		return "! flaky !";
+	    	}
+	    	else {
+	    		return "not flaky";
+	    	}
+    	}
+    })
 }
+
 function collapse(){
 	d3.select(this)
 	.on("click", expand)
 	     .select("ul")
 	     .remove();
 }
+
 </script>
