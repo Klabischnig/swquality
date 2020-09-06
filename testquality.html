@@ -52,7 +52,7 @@
    
     <input type="range"class="slider" id="range_execution">
     <button class="myButton" type="button" id="btn_flaky">Show Flaky-Tests</button>
-
+	
   <details>
   <summary>Testexecution: <span id="value_execution"></span></summary>
 	<p>Timestamp (Testexecution): <span id="testTimestamp"></span></p>
@@ -60,13 +60,34 @@
 	<p>Timestamp (Release): <span id="releaseTimestamp"></span></p>
 	<p>Version: <span id="version"></span></p>
 	
-</details>
+	</details>
+	
+	<details>
+		<summary>Edit Data</summary>
+		
+		<form id="myForm">
+		</form>
+		<button class="myButton" type="button" id="btn_enable">Edit</button>
+		<button class="myButton" type="button" id="btn_save">Save</button>
+		<p></p>
+		<button class="myButton" type="button" id="btn_add_data">Add new testresults</button>
+
+	</details>
+	
 
 </div>
 </center>
+	
 </body>
 
 <script>
+
+var witchView = "testquality";
+var executions = [];
+var min_execution = 0;
+var max_execution = 0;
+var current_execution = 0;
+var checkboxes = [];
 
 
 function hideTestsets(){
@@ -118,30 +139,35 @@ var selected_component;
 
 d3.json("./data/testexecution.json", function(data_executions) {
 	
-	/* define first and last testexecution */
-	var executions = [];
+	/* init executions */
 	for (i in data_executions){
 		x = parseInt(data_executions[i].idTestexecution);
 		executions.push(x);
 	}
-	var min_execution = d3.min(executions);
-	var max_execution = d3.max(executions);
-
-	/* define current testexecution id,
-	 * start with the last testexecution */
-	var current_execution = max_execution;
 	
-	/* set the values of the testexecution slider and outputs */
-	document.getElementById("range_execution").min = min_execution;
-	document.getElementById("range_execution").max = max_execution;
-	document.getElementById("value_execution").value = current_execution;
-	
+	updateExecutions(executions);
 
 	/* init slider */
 	updateSlider(current_execution, data_executions[current_execution-1]);
 	
-	/***********************************  listen for update ******************************************************************/
+	/* init checkboxes */
+	for (i in data_executions) {
+		lbl_exToShow = createNewElement("LABEL", "lbl_"+data_executions[i].idTestexecution, null)
+		lbl_text = document.createTextNode(data_executions[i].idTestexecution);
+		lbl_exToShow.setAttribute("for", "lblEx");
+		lbl_exToShow.appendChild(lbl_text);
+		document.getElementById("myForm").insertBefore(lbl_exToShow,document.getElementById("lblEx"));		
+
+		cbx_exToShow = createNewElement("INPUT", "cbx_"+data_executions[i].idTestexecution, "CHECKBOX");
+		cbx_exToShow.setAttribute("checked", true);
+		cbx_exToShow.setAttribute("disabled", true);
+		checkboxes.push(cbx_exToShow);
+		document.getElementById("myForm").insertBefore(cbx_exToShow,document.getElementById("cbx_exToShow"));		
+	}	
 	
+	
+	/***********************************  listen for update ******************************************************************/
+
 
 	/* listen on execution slider input */
 	var slider_execution = document.getElementById("range_execution");
@@ -254,12 +280,15 @@ d3.json("./data/testexecution.json", function(data_executions) {
 
 	/* update all treemaps */
 	function updateTreemaps(current_execution){
+
 		d3.selectAll("rect").remove();
 		
 		/* read json data of current test execution */
 		var current_release = parseInt(document.getElementById("idRelease").innerText)
 		var current_testexecution = parseInt(document.getElementById("value_execution").innerText)
+		
 		d3.json("./data/testquality/release"+current_release+"_ex"+current_testexecution+".json", function(data_releases) {
+			
 			
 			/* define root of hierarchical data (components)*/
 		 	var root = d3.hierarchy(data_releases)
@@ -320,6 +349,63 @@ function show_testset_information(testset) {
 	this.idTestset = testset.idTestset;
     this.testset = testset;
     var wnd = window.open("./testset.html","");
+}
+
+
+function createNewElement (element, id, type) {
+	var el = document.createElement(element);
+	el.setAttribute("id", id)
+	el.setAttribute("type", type);
+	return el;
+}
+
+d3.select("#btn_add_data").on("click", function(){
+	
+	var tab = window.open("https://github.com/Klabischnig/swquality/tree/master/data/testquality", 
+	'_blank');
+	tab.focus();
+	  
+})
+
+d3.select("#btn_enable").on("click", function() {	
+	for ( i in checkboxes){
+		document.getElementById(checkboxes[i].id).disabled = false;
+	}
+	
+	d3.select("#btn_save").on("click", function() {
+		var newExecutions = [];
+		for ( i in checkboxes){
+			var checkBox = document.getElementById(checkboxes[i].id);				
+			checkBox.disabled = true;
+			if (checkBox.checked == true){
+				newExecutions.push(parseInt(i)+1)
+			}
+			checkboxes[i] = checkBox;	
+		}
+		if (newExecutions.length == 0) {
+			alert("Please choose results of one testexecution at least!")
+		}
+		else {
+			executions = newExecutions;
+			updateExecutions(executions)	
+		}
+	})
+})
+
+/* define first and last testexecution */
+function updateExecutions(executions) {
+	
+	min_execution = d3.min(executions);
+	max_execution = d3.max(executions);
+
+	/* define current testexecution id,
+	 * start with the last testexecution */
+	current_execution = max_execution;
+	
+	/* set the values of the testexecution slider and outputs */
+	document.getElementById("range_execution").min = min_execution;
+	document.getElementById("range_execution").max = max_execution;
+	document.getElementById("value_execution").value = current_execution;
 }
 
 
