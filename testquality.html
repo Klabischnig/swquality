@@ -270,6 +270,32 @@ d3.json("./data/testexecution.json", function(data_executions) {
 		}
 	}
 	
+	d3.select("#btn_enable").on("click", function() {	
+		for ( i in checkboxes){
+			document.getElementById(checkboxes[i].id).disabled = false;
+		}
+		
+		d3.select("#btn_save").on("click", function() {
+			var newExecutions = [];
+			for ( i in checkboxes){
+				var checkBox = document.getElementById(checkboxes[i].id);				
+				checkBox.disabled = true;
+				if (checkBox.checked == true){
+					newExecutions.push(parseInt(i)+1)
+				}
+				checkboxes[i] = checkBox;	
+			}
+			if (newExecutions.length == 0) {
+				alert("Please choose results of one testexecution at least!")
+			}
+			else {
+				executions = newExecutions;
+				updateExecutions(executions);
+				updateSlider(current_execution, data_executions[current_execution-1]);
+				updateTreemaps(current_execution);
+			}
+		})
+	})
 	
 
 	/**************************************** init ******************************************************************/ 
@@ -367,30 +393,7 @@ d3.select("#btn_add_data").on("click", function(){
 	  
 })
 
-d3.select("#btn_enable").on("click", function() {	
-	for ( i in checkboxes){
-		document.getElementById(checkboxes[i].id).disabled = false;
-	}
-	
-	d3.select("#btn_save").on("click", function() {
-		var newExecutions = [];
-		for ( i in checkboxes){
-			var checkBox = document.getElementById(checkboxes[i].id);				
-			checkBox.disabled = true;
-			if (checkBox.checked == true){
-				newExecutions.push(parseInt(i)+1)
-			}
-			checkboxes[i] = checkBox;	
-		}
-		if (newExecutions.length == 0) {
-			alert("Please choose results of one testexecution at least!")
-		}
-		else {
-			executions = newExecutions;
-			updateExecutions(executions)	
-		}
-	})
-})
+
 
 /* define first and last testexecution */
 function updateExecutions(executions) {
