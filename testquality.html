@@ -365,7 +365,6 @@ function showTestsets(current_execution, component, testdata, level){
 					data_testcases.push(testsuites[j].testcases[k])
 				}
 			}
-			//TODO: switch between ts and tc view
 			svg_pie = createPiecharts(150, 150, 40, testsets[i], level, data_testcases);
 		}		
 	}
@@ -385,15 +384,14 @@ function createNewElement (element, id, type) {
 	return el;
 }
 
-d3.select("#btn_add_data").on("click", function(){
+d3.select("#btn_add_data")
+	.on("click", function(){
+		alert("Please make sure you are logged in at GitHub!");
+		var tab = window.open("https://github.com/Klabischnig/swquality/tree/master/data/testquality", 
+		'_blank');
+		tab.focus();  
+	})
 	
-	var tab = window.open("https://github.com/Klabischnig/swquality/tree/master/data/testquality", 
-	'_blank');
-	tab.focus();
-	  
-})
-
-
 
 /* define first and last testexecution */
 function updateExecutions(executions) {
@@ -410,6 +408,10 @@ function updateExecutions(executions) {
 	document.getElementById("range_execution").max = max_execution;
 	document.getElementById("value_execution").value = current_execution;
 }
+
+
+
+
 
 
 
