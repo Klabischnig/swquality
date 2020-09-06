@@ -7,7 +7,7 @@
           "idComponent": "1",
           "title": "component 1",
           "subsystem": "subsystem 1",
-          "numberOfects": "0",
+          "numberOfDefects": "0",
           "testcoverage": "90",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -16,7 +16,7 @@
           "idComponent": "2",
           "title": "component 2",
           "subsystem": "subsystem 1",
-          "numberOfects": "1",
+          "numberOfDefects": "1",
           "testcoverage": "85",
           "idRelease": "4",
           "hasFlakyTests": "unit"
@@ -25,7 +25,7 @@
           "idComponent": "3",
           "title": "component 3",
           "subsystem": "subsystem 1",
-          "numberOfects": "0",
+          "numberOfDefects": "0",
           "testcoverage": "83.1",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -34,7 +34,7 @@
           "idComponent": "4",
           "title": "component 4",
           "subsystem": "subsystem 1",
-          "numberOfects": "0",
+          "numberOfDefects": "0",
           "testcoverage": "84.92",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -48,7 +48,7 @@
           "idComponent": "5",
           "title": "component 5",
           "subsystem": "subsystem 2",
-          "numberOfects": "1",
+          "numberOfDefects": "1",
           "testcoverage": "97.2",
           "idRelease": "4",
           "hasFlakyTests": "integration, system"
@@ -57,7 +57,7 @@
           "idComponent": "6",
           "title": "component 6",
           "subsystem": "subsystem 2",
-          "numberOfects": "2",
+          "numberOfDefects": "2",
           "testcoverage": "88.88",
           "idRelease": "4",
           "hasFlakyTests": "unit"
@@ -71,7 +71,7 @@
           "idComponent": "7",
           "title": "component 7",
           "subsystem": "subsystem 3",
-          "numberOfects": "0",
+          "numberOfDefects": "0",
           "testcoverage": "45.9",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -80,7 +80,7 @@
           "idComponent": "8",
           "title": "component 8",
           "subsystem": "subsystem 3",
-          "numberOfects": "0",
+          "numberOfDefects": "0",
           "testcoverage": "38",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -89,7 +89,7 @@
           "idComponent": "9",
           "title": "component 9",
           "subsystem": "subsystem 3",
-          "numberOfects": "0",
+          "numberOfDefects": "0",
           "testcoverage": "0",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -98,7 +98,7 @@
           "idComponent": "10",
           "title": "component 10",
           "subsystem": "subsystem 3",
-          "numberOfects": "3",
+          "numberOfDefects": "3",
           "testcoverage": "84",
           "idRelease": "4",
           "hasFlakyTests": "acceptance"
@@ -107,7 +107,7 @@
           "idComponent": "11",
           "title": "component 11",
           "subsystem": "subsystem 3",
-          "numberOfects": "4",
+          "numberOfDefects": "4",
           "testcoverage": "90.5",
           "idRelease": "4",
           "hasFlakyTests": "acceptance"
@@ -116,7 +116,7 @@
           "idComponent": "12",
           "title": "component 12",
           "subsystem": "subsystem 3",
-          "numberOfects": "0",
+          "numberOfDefects": "0",
           "testcoverage": "11",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -148,7 +148,7 @@
           "idComponent": "15",
           "title": "component 15",
           "subsystem": "subsystem 4",
-          "numberOfects": "7",
+          "numberOfDefects": "7",
           "testcoverage": "95",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -166,7 +166,7 @@
           "idComponent": "17",
           "title": "component 17",
           "subsystem": "subsystem 4",
-          "numberOfects": "5",
+          "numberOfDefects": "5",
           "testcoverage": "77",
           "idRelease": "4",
           "hasFlakyTests": "unit, system"
@@ -175,7 +175,7 @@
           "idComponent": "18",
           "title": "component 18",
           "subsystem": "subsystem 4",
-          "numberOfects": "0",
+          "numberOfDefects": "0",
           "testcoverage": "30",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -184,7 +184,7 @@
           "idComponent": "19",
           "title": "component 19",
           "subsystem": "subsystem 4",
-          "numberOfects": "3",
+          "numberOfDefects": "3",
           "testcoverage": "44",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -193,7 +193,7 @@
           "idComponent": "20",
           "title": "component 20",
           "subsystem": "subsystem 4",
-          "numberOfects": "1",
+          "numberOfDefects": "1",
           "testcoverage": "59",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -202,7 +202,7 @@
           "idComponent": "21",
           "title": "component 21",
           "subsystem": "subsystem 4",
-          "numberOfects": "2",
+          "numberOfDefects": "2",
           "testcoverage": "3",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -216,7 +216,7 @@
           "idComponent": "22",
           "title": "component 22",
           "subsystem": "subsystem 5",
-          "numberOfects": "1",
+          "numberOfDefects": "1",
           "testcoverage": "81.66",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -225,7 +225,7 @@
           "idComponent": "23",
           "title": "component 23",
           "subsystem": "subsystem 5",
-          "numberOfects": "0",
+          "numberOfDefects": "0",
           "testcoverage": "0",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -234,7 +234,7 @@
           "idComponent": "24",
           "title": "component 24",
           "subsystem": "subsystem 5",
-          "numberOfects": "0",
+          "numberOfDefects": "0",
           "testcoverage": "96",
           "idRelease": "4",
           "hasFlakyTests": ""
@@ -243,7 +243,7 @@
           "idComponent": "25",
           "title": "component 25",
           "subsystem": "subsystem 5",
-          "numberOfects": "22",
+          "numberOfDefects": "22",
           "testcoverage": "82.47",
           "idRelease": "4",
           "hasFlakyTests": "unit, integration"
@@ -252,7 +252,7 @@
           "idComponent": "26",
           "title": "component 26",
           "subsystem": "subsystem 5",
-          "numberOfects": "1",
+          "numberOfDefects": "1",
           "testcoverage": "85",
           "idRelease": "4",
           "hasFlakyTests": ""
