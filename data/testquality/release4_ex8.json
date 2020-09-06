@@ -80,8 +80,8 @@
           "idComponent": "8",
           "title": "component 8",
           "subsystem": "subsystem 3",
-          "numberOfDefects": "0",
-          "testcoverage": "38",
+          "numberOfDefects": "1",
+          "testcoverage": "57",
           "idRelease": "4",
           "hasFlakyTests": ""
         },
@@ -90,7 +90,7 @@
           "title": "component 9",
           "subsystem": "subsystem 3",
           "numberOfDefects": "0",
-          "testcoverage": "0",
+          "testcoverage": "61.8",
           "idRelease": "4",
           "hasFlakyTests": ""
         },
@@ -126,7 +126,7 @@
           "title": "component 13",
           "subsystem": "subsystem 3",
           "numberOfDefects": "29",
-          "testcoverage": "1",
+          "testcoverage": "27",
           "idRelease": "4",
           "hasFlakyTests": ""
         }
