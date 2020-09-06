@@ -140,7 +140,7 @@
           "title": "component 14",
           "subsystem": "subsystem 4",
           "numberOfDefects": "1",
-          "testcoverage": "81.4",
+          "testcoverage": "97.84",
           "idRelease": "5",
           "hasFlakyTests": ""
         },
@@ -158,7 +158,7 @@
           "title": "component 16",
           "subsystem": "subsystem 4",
           "numberOfDefects": "54",
-          "testcoverage": "1",
+          "testcoverage": "19.8",
           "idRelease": "5",
           "hasFlakyTests": "system, integration"
         },
@@ -226,7 +226,7 @@
           "title": "component 23",
           "subsystem": "subsystem 5",
           "numberOfDefects": "0",
-          "testcoverage": "0",
+          "testcoverage": "43.7",
           "idRelease": "5",
           "hasFlakyTests": ""
         },
