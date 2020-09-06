@@ -139,8 +139,8 @@
           "idComponent": "14",
           "title": "component 14",
           "subsystem": "subsystem 4",
-          "numberOfDefects": "81.4",
-          "testcoverage": "1",
+          "numberOfDefects": "1",
+          "testcoverage": "81.4",
           "idRelease": "4",
           "hasFlakyTests": ""
         },
@@ -160,7 +160,7 @@
           "numberOfDefects": "54",
           "testcoverage": "1",
           "idRelease": "4",
-          "hasFlakyTests": "unit, system"
+          "hasFlakyTests": "system, integration"
         },
         {
           "idComponent": "17",
