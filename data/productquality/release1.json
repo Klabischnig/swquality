@@ -8,7 +8,7 @@
           "title": "component 1",
           "subsystem": "subsystem 1",
           "numberOfDefects": "10",
-          "testcoverage": "17.63",
+          "testcoverage": "90",
           "idRelease": "1",
           "hasFlakyTests": ""
         },
@@ -17,7 +17,7 @@
           "title": "component 2",
           "subsystem": "subsystem 1",
           "numberOfDefects": "2",
-          "testcoverage": "61",
+          "testcoverage": "85",
           "idRelease": "1",
           "hasFlakyTests": "integration, acceptance"
         },
