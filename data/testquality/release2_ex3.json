@@ -28,7 +28,7 @@
           "numberOfDefects": "6",
           "testcoverage": "17.93",
           "idRelease": "1",
-          "hasFlakyTests": "unit, system"
+          "hasFlakyTests": "system"
         },
         {
           "idComponent": "4",
@@ -37,7 +37,7 @@
           "numberOfDefects": "6",
           "testcoverage": "84.92",
           "idRelease": "1",
-          "hasFlakyTests": "unit, system"
+          "hasFlakyTests": "system"
         }
       ]
     },
@@ -115,7 +115,7 @@
           "numberOfDefects": "3",
           "testcoverage": "95",
           "idRelease": "1",
-          "hasFlakyTests": "acceptance"
+          "hasFlakyTests": "unit, acceptance"
         },
         {
           "idComponent": "17",
@@ -142,7 +142,7 @@
           "numberOfDefects": "0",
           "testcoverage": "44",
           "idRelease": "1",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         },
         {
           "idComponent": "20",
@@ -151,7 +151,7 @@
           "numberOfDefects": "0",
           "testcoverage": "59",
           "idRelease": "1",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         },
         {
           "idComponent": "21",
@@ -174,7 +174,7 @@
           "numberOfDefects": "3",
           "testcoverage": "81.66",
           "idRelease": "1",
-          "hasFlakyTests": "acceptance"
+          "hasFlakyTests": "unit, acceptance"
         },
         {
           "idComponent": "24",

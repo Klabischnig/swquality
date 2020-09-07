@@ -28,7 +28,7 @@
           "numberOfDefects": "6",
           "testcoverage": "83.1",
           "idRelease": "1",
-          "hasFlakyTests": "unit, system"
+          "hasFlakyTests": "system"
         },
         {
           "idComponent": "4",
@@ -37,7 +37,7 @@
           "numberOfDefects": "6",
           "testcoverage": "84.92",
           "idRelease": "1",
-          "hasFlakyTests": "unit, system"
+          "hasFlakyTests": "system"
         }
       ]
     },

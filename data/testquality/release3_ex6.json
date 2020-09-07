@@ -28,7 +28,7 @@
           "numberOfDefects": "6",
           "testcoverage": "83.1",
           "idRelease": "1",
-          "hasFlakyTests": "unit, system"
+          "hasFlakyTests": "system"
         },
         {
           "idComponent": "4",
@@ -37,7 +37,7 @@
           "numberOfDefects": "6",
           "testcoverage": "84.92",
           "idRelease": "1",
-          "hasFlakyTests": "unit, system"
+          "hasFlakyTests": "system"
         }
       ]
     },
@@ -210,7 +210,7 @@
           "numberOfDefects": "3",
           "testcoverage": "96",
           "idRelease": "1",
-          "hasFlakyTests": "acceptance"
+          "hasFlakyTests": "unit, acceptance"
         },
         {
           "idComponent": "25",
@@ -219,7 +219,7 @@
           "numberOfDefects": "20",
           "testcoverage": "82.47",
           "idRelease": "1",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         },
         {
           "idComponent": "26",
