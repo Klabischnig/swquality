@@ -26,7 +26,7 @@
           "title": "component 3",
           "subsystem": "subsystem 1",
           "numberOfDefects": "6",
-          "testcoverage": "17.93",
+          "testcoverage": "39.82",
           "idRelease": "1",
           "hasFlakyTests": "system"
         }
