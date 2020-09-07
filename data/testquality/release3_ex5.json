@@ -136,26 +136,8 @@
       "subsystem": "subsystem 4",
       "children": [
         {
-          "idComponent": "14",
-          "title": "component 14",
-          "subsystem": "subsystem 4",
-          "numberOfDefects": "3",
-          "testcoverage": "85.1",
-          "idRelease": "1",
-          "hasFlakyTests": "acceptance"
-        },
-        {
           "idComponent": "15",
           "title": "component 15",
-          "subsystem": "subsystem 4",
-          "numberOfDefects": "3",
-          "testcoverage": "85.1",
-          "idRelease": "1",
-          "hasFlakyTests": "acceptance"
-        },
-        {
-          "idComponent": "16",
-          "title": "component 16",
           "subsystem": "subsystem 4",
           "numberOfDefects": "3",
           "testcoverage": "85.1",
@@ -215,15 +197,6 @@
         {
           "idComponent": "22",
           "title": "component 22",
-          "subsystem": "subsystem 5",
-          "numberOfDefects": "3",
-          "testcoverage": "85.1",
-          "idRelease": "1",
-          "hasFlakyTests": "acceptance"
-        },
-        {
-          "idComponent": "23",
-          "title": "component 23",
           "subsystem": "subsystem 5",
           "numberOfDefects": "3",
           "testcoverage": "85.1",
