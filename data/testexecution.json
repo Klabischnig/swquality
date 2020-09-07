@@ -4,7 +4,7 @@
  {"idTestexecution":"3", "testexecutionStamp":"2019-04-05 00:00:00", "idRelease":"2", "releaseStamp":"2019-04-01 00:00:00", "version":"1.1"},
  {"idTestexecution":"4", "testexecutionStamp":"2019-05-14 00:00:00", "idRelease":"2", "releaseStamp":"2019-04-01 00:00:00", "version":"1.1"},
  {"idTestexecution":"5", "testexecutionStamp":"2019-06-08 00:00:00", "idRelease":"3", "releaseStamp":"2019-07-01 00:00:00", "version":"1.2"},
- {"idTestexecution":"6", "testexecutionStamp":"2019-07-07 00:00:00", "idRelease":"3", "releaseStamp":"2019-07-01 00:00:00", "version":"1.2"}
+ {"idTestexecution":"6", "testexecutionStamp":"2019-07-07 00:00:00", "idRelease":"3", "releaseStamp":"2019-07-01 00:00:00", "version":"1.2"},
  {"idTestexecution":"7", "testexecutionStamp":"2019-01-02 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.0"},
  {"idTestexecution":"8", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.0"},
  {"idTestexecution":"9", "testexecutionStamp":"2019-04-05 00:00:00", "idRelease":"2", "releaseStamp":"2019-04-01 00:00:00", "version":"1.1"},
