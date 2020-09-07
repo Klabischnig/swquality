@@ -8,41 +8,27 @@
           "title": "component 1",
           "subsystem": "subsystem 1",
           "numberOfDefects": "10",
-          "testcoverage": "20.6",
-          "idRelease": "1"
+          "testcoverage": "17.63",
+          "idRelease": "1",
+          "hasFlakyTests": ""
         },
         {
           "idComponent": "2",
           "title": "component 2",
           "subsystem": "subsystem 1",
           "numberOfDefects": "2",
-          "testcoverage": "40",
-          "idRelease": "1"
+          "testcoverage": "61",
+          "idRelease": "1",
+          "hasFlakyTests": "integration, acceptance"
         },
         {
           "idComponent": "3",
           "title": "component 3",
           "subsystem": "subsystem 1",
           "numberOfDefects": "6",
-          "testcoverage": "66.66",
-          "idRelease": "1"
-        },
-        {
-          "idComponent": "10",
-          "title": "component 10",
-          "subsystem": "subsystem 1",
-          "numberOfDefects": "19",
-          "testcoverage": "54.88",
-          "idRelease": "1"
-        },
-        {
-          "idComponent": "4",
-          "title": "component 4",
-          "subsystem": "subsystem 2",
-          "numberOfDefects": "0",
-          "testcoverage": "1.5",
+          "testcoverage": "17.93",
           "idRelease": "1",
-		"hasFlakyTests":"unit"
+          "hasFlakyTests": "system"
         }
       ]
     },
@@ -54,16 +40,18 @@
           "title": "component 5",
           "subsystem": "subsystem 2",
           "numberOfDefects": "5",
-          "testcoverage": "14.96",
-          "idRelease": "1"
+          "testcoverage": "97.2",
+          "idRelease": "1",
+          "hasFlakyTests": ""
         },
         {
           "idComponent": "6",
           "title": "component 6",
           "subsystem": "subsystem 2",
           "numberOfDefects": "1",
-          "testcoverage": "80",
-          "idRelease": "1"
+          "testcoverage": "88.88",
+          "idRelease": "1",
+          "hasFlakyTests": "integration"
         }
       ]
     },
@@ -71,28 +59,81 @@
       "subsystem": "subsystem 3",
       "children": [
         {
-          "idComponent": "7",
-          "title": "component 7",
+          "idComponent": "10",
+          "title": "component 10",
           "subsystem": "subsystem 3",
           "numberOfDefects": "3",
-          "testcoverage": "85.1",
-          "idRelease": "1"
+          "testcoverage": "84",
+          "idRelease": "1",
+          "hasFlakyTests": "acceptance"
         },
         {
-          "idComponent": "8",
-          "title": "component 8",
+          "idComponent": "11",
+          "title": "component 11",
           "subsystem": "subsystem 3",
           "numberOfDefects": "20",
-          "testcoverage": "15.6",
-          "idRelease": "1"
+          "testcoverage": "90.5",
+          "idRelease": "1",
+          "hasFlakyTests": ""
         },
         {
-          "idComponent": "9",
-          "title": "component 9",
+          "idComponent": "12",
+          "title": "component 12",
           "subsystem": "subsystem 3",
           "numberOfDefects": "0",
-          "testcoverage": "90.3",
-          "idRelease": "1"
+          "testcoverage": "11",
+          "idRelease": "1",
+          "hasFlakyTests": ""
+        }
+      ]
+    },
+    {
+      "subsystem": "subsystem 4",
+      "children": [
+        {
+          "idComponent": "15",
+          "title": "component 15",
+          "subsystem": "subsystem 4",
+          "numberOfDefects": "3",
+          "testcoverage": "95",
+          "idRelease": "1",
+          "hasFlakyTests": "acceptance"
+        },
+        {
+          "idComponent": "18",
+          "title": "component 18",
+          "subsystem": "subsystem 4",
+          "numberOfDefects": "20",
+          "testcoverage": "30",
+          "idRelease": "1",
+          "hasFlakyTests": ""
+        },
+        {
+          "idComponent": "19",
+          "title": "component 19",
+          "subsystem": "subsystem 4",
+          "numberOfDefects": "0",
+          "testcoverage": "44",
+          "idRelease": "1",
+          "hasFlakyTests": ""
+        },
+        {
+          "idComponent": "20",
+          "title": "component 20",
+          "subsystem": "subsystem 4",
+          "numberOfDefects": "0",
+          "testcoverage": "59",
+          "idRelease": "1",
+          "hasFlakyTests": ""
+        },
+        {
+          "idComponent": "21",
+          "title": "component 21",
+          "subsystem": "subsystem 4",
+          "numberOfDefects": "0",
+          "testcoverage": "3",
+          "idRelease": "1",
+          "hasFlakyTests": ""
         }
       ]
     }
