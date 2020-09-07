@@ -60,7 +60,7 @@
           "numberOfDefects": "2",
           "testcoverage": "88.88",
           "idRelease": "5",
-          "hasFlakyTests": "unit"
+          "hasFlakyTests": ""
         }
       ]
     },
@@ -246,7 +246,7 @@
           "numberOfDefects": "22",
           "testcoverage": "82.47",
           "idRelease": "5",
-          "hasFlakyTests": "unit, integration"
+          "hasFlakyTests": "integration"
         },
         {
           "idComponent": "26",

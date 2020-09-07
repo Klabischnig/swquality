@@ -53,7 +53,7 @@ function updateTreemap(current_execution, root, level, svg, width, height){
 		      .attr("y", 14)  
 		      .text(level)
 		      .attr("font-size", "19px")
-		      .attr("fill",  "grey" )
+		      .attr("fill",  "grey")
 	
 		if (root.children.length < 10 && root.leaves().length < 45) {   
 		

@@ -10,7 +10,7 @@
           "numberOfDefects": "0",
           "testcoverage": "90",
           "idRelease": "4",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         },
         {
           "idComponent": "2",
@@ -28,7 +28,7 @@
           "numberOfDefects": "0",
           "testcoverage": "83.1",
           "idRelease": "4",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         },
         {
           "idComponent": "4",
@@ -37,7 +37,7 @@
           "numberOfDefects": "0",
           "testcoverage": "84.92",
           "idRelease": "4",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         }
       ]
     },
@@ -51,7 +51,7 @@
           "numberOfDefects": "1",
           "testcoverage": "97.2",
           "idRelease": "4",
-          "hasFlakyTests": "integration, system"
+          "hasFlakyTests": "unit, integration, system"
         },
         {
           "idComponent": "6",
@@ -151,7 +151,7 @@
           "numberOfDefects": "7",
           "testcoverage": "95",
           "idRelease": "4",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         },
         {
           "idComponent": "16",
@@ -169,7 +169,7 @@
           "numberOfDefects": "5",
           "testcoverage": "77",
           "idRelease": "4",
-          "hasFlakyTests": "unit, system"
+          "hasFlakyTests": "system"
         },
         {
           "idComponent": "18",
@@ -187,7 +187,7 @@
           "numberOfDefects": "3",
           "testcoverage": "44",
           "idRelease": "4",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         },
         {
           "idComponent": "20",
@@ -196,7 +196,7 @@
           "numberOfDefects": "1",
           "testcoverage": "59",
           "idRelease": "4",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         },
         {
           "idComponent": "21",
@@ -219,7 +219,7 @@
           "numberOfDefects": "1",
           "testcoverage": "81.66",
           "idRelease": "4",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         },
         {
           "idComponent": "23",
@@ -246,7 +246,7 @@
           "numberOfDefects": "22",
           "testcoverage": "82.47",
           "idRelease": "4",
-          "hasFlakyTests": "unit, integration"
+          "hasFlakyTests": "integration"
         },
         {
           "idComponent": "26",
@@ -273,7 +273,7 @@
           "numberOfDefects": "6",
           "testcoverage": "84.76",
           "idRelease": "4",
-          "hasFlakyTests": "unit"
+          "hasFlakyTests": ""
         }
       ]
     }
