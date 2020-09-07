@@ -196,7 +196,7 @@
           "numberOfDefects": "1",
           "testcoverage": "59",
           "idRelease": "5",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         },
         {
           "idComponent": "21",
@@ -205,7 +205,7 @@
           "numberOfDefects": "0",
           "testcoverage": "42.57",
           "idRelease": "5",
-          "hasFlakyTests": "unit"
+          "hasFlakyTests": ""
         }
       ]
     },
@@ -219,7 +219,7 @@
           "numberOfDefects": "1",
           "testcoverage": "81.66",
           "idRelease": "5",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         },
         {
           "idComponent": "23",

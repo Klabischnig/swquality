@@ -64,7 +64,7 @@
             "idTestcase": "28",
             "title": "tc28",
             "result": "passed",
-            ""isFlaky": "false"
+            "isFlaky": "false"
           },
           {
             "idTestcase": "29",
@@ -91,13 +91,13 @@
                 "idTestcase": "11",
                 "title": "tc11",
                 "result": "failed",
-                ""isFlaky": "false"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "12",
                 "title": "tc3",
                 "result": "failed",
-                ""isFlaky": "false"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "13",
@@ -1003,7 +1003,7 @@
             "idTestcase": "34",
             "title": "tc34",
             "result": "passed",
-            ""isFlaky": "false"
+            "isFlaky": "false"
           },
           {
             "idTestcase": "35",
