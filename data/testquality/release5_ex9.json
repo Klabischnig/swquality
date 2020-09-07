@@ -117,7 +117,7 @@
           "title": "component 12",
           "subsystem": "subsystem 3",
           "numberOfDefects": "0",
-          "testcoverage": "11",
+          "testcoverage": "31.4",
           "idRelease": "5",
           "hasFlakyTests": ""
         },
@@ -203,7 +203,7 @@
           "title": "component 21",
           "subsystem": "subsystem 4",
           "numberOfDefects": "2",
-          "testcoverage": "3",
+          "testcoverage": "27.14",
           "idRelease": "5",
           "hasFlakyTests": ""
         }

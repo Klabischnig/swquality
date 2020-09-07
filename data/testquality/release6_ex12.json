@@ -117,7 +117,7 @@
           "title": "component 12",
           "subsystem": "subsystem 3",
           "numberOfDefects": "0",
-          "testcoverage": "11",
+          "testcoverage": "31.4",
           "idRelease": "5",
           "hasFlakyTests": ""
         },

@@ -113,7 +113,7 @@
           "title": "component 19",
           "subsystem": "subsystem 4",
           "numberOfDefects": "0",
-          "testcoverage": "44",
+          "testcoverage": "27.6",
           "idRelease": "1",
           "hasFlakyTests": ""
         },
