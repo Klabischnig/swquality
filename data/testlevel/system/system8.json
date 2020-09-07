@@ -1570,23 +1570,6 @@
     ]
   },
   {
-    "idComponent": "21",
-    "testsets": [
-      {
-        "idTestset": "6",
-        "title": "ts5",
-        "testcases": [
-          {
-            "idTestcase": "36",
-            "title": "tc36",
-            "result": "passed",
-            "isFlaky": "false"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "idComponent": "22",
     "testsets": [
       {

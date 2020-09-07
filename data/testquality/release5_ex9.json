@@ -90,7 +90,7 @@
           "title": "component 9",
           "subsystem": "subsystem 3",
           "numberOfDefects": "0",
-          "testcoverage": "61.8",
+          "testcoverage": "70",
           "idRelease": "5",
           "hasFlakyTests": ""
         },
@@ -126,7 +126,7 @@
           "title": "component 13",
           "subsystem": "subsystem 3",
           "numberOfDefects": "29",
-          "testcoverage": "27",
+          "testcoverage": "51.1",
           "idRelease": "5",
           "hasFlakyTests": ""
         }
