@@ -1469,10 +1469,7 @@
               }
             ]
           }
-        ]
-      }
-    ],
-    "testcases": [
+        ],"testcases": [
       {
         "idTestcase": "42",
         "title": "tc42",
@@ -1490,6 +1487,8 @@
         "title": "tc44",
         "result": "passed",
         "isFlaky": "false"
+      }
+    ]
       }
     ]
   },
