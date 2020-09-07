@@ -185,7 +185,7 @@
           "title": "component 21",
           "subsystem": "subsystem 4",
           "numberOfDefects": "0",
-          "testcoverage": "3",
+          "testcoverage": "27.14",
           "idRelease": "1",
           "hasFlakyTests": ""
         }
