@@ -72,7 +72,7 @@
           "title": "component 7",
           "subsystem": "subsystem 3",
           "numberOfDefects": "0",
-          "testcoverage": "45.9",
+          "testcoverage": "57.75",
           "idRelease": "4",
           "hasFlakyTests": ""
         },
