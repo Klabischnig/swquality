@@ -905,7 +905,8 @@
             ]
           }
         ]
-      }]
+      }
+    ]
   },
   {
     "idComponent": "8",
@@ -1384,83 +1385,6 @@
     ]
   },
   {
-    "idComponent": "16",
-    "testsets": [
-      {
-        "idTestset": "1",
-        "title": "ts1",
-        "testsuites": [
-          {
-            "idTestsuite": "1",
-            "testcases": [
-              {
-                "idTestcase": "1",
-                "title": "tc1",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "2",
-                "title": "tc2",
-                "result": "failed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "3",
-                "title": "tc3",
-                "result": "failed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "4",
-                "title": "tc4",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          },
-          {
-            "idTestsuite": "2",
-            "testcases": [
-              {
-                "idTestcase": "5",
-                "title": "tc5",
-                "result": "passed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "6",
-                "title": "tc6",
-                "result": "passed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "7",
-                "title": "tc7",
-                "result": "not executed",
-                "isFlaky": "false"
-              }
-            ]
-          }
-        ],
-        "testcases": [
-          {
-            "idTestcase": "28",
-            "title": "tc28",
-            "result": "passed",
-            "isFlaky": "false"
-          },
-          {
-            "idTestcase": "29",
-            "title": "tc29",
-            "result": "passed",
-            "isFlaky": "false"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "idComponent": "17",
     "testsets": [
       {
@@ -1756,7 +1680,8 @@
             "isFlaky": "false"
           }
         ]
-      }]
+      }
+    ]
   },
   {
     "idComponent": "22",
@@ -1834,23 +1759,6 @@
           {
             "idTestcase": "35",
             "title": "tc35",
-            "result": "passed",
-            "isFlaky": "false"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "idComponent": "21",
-    "testsets": [
-      {
-        "idTestset": "6",
-        "title": "ts5",
-        "testcases": [
-          {
-            "idTestcase": "36",
-            "title": "tc36",
             "result": "passed",
             "isFlaky": "false"
           }
