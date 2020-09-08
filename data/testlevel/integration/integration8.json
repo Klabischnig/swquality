@@ -1653,6 +1653,34 @@
     ]
   },
   {
+    "idComponent": "23",
+    "testsets": [
+      {
+        "idTestset": "7",
+        "title": "ts7",
+        "testsuites": [
+          {
+            "idTestsuite": "8",
+            "testcases": [
+              {
+                "idTestcase": "23",
+                "title": "tc23",
+                "result": "not executed",
+                "isFlaky": "false"
+              },
+              {
+                "idTestcase": "24",
+                "title": "tc24",
+                "result": "failed",
+                "isFlaky": "false"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "idComponent": "24",
     "testsets": [
       {

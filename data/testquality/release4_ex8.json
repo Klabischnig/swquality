@@ -226,7 +226,7 @@
           "title": "component 23",
           "subsystem": "subsystem 5",
           "numberOfDefects": "0",
-          "testcoverage": "0",
+          "testcoverage": "31.1",
           "idRelease": "4",
           "hasFlakyTests": ""
         },
