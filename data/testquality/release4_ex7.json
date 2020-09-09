@@ -81,7 +81,7 @@
           "title": "component 8",
           "subsystem": "subsystem 3",
           "numberOfDefects": "0",
-          "testcoverage": "38",
+          "testcoverage": "57",
           "idRelease": "4",
           "hasFlakyTests": ""
         },
