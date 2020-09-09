@@ -25,13 +25,13 @@
                 "idTestcase": "3",
                 "title": "tc3",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               }
             ]
           },
@@ -168,13 +168,13 @@
                 "idTestcase": "3",
                 "title": "tc3",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               }
             ]
           },
@@ -311,13 +311,13 @@
                 "idTestcase": "3",
                 "title": "tc3",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               }
             ]
           },
@@ -454,13 +454,13 @@
                 "idTestcase": "3",
                 "title": "tc3",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               }
             ]
           },
@@ -591,13 +591,13 @@
                 "idTestcase": "3",
                 "title": "tc3",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               }
             ]
           },
@@ -728,13 +728,13 @@
                 "idTestcase": "3",
                 "title": "tc3",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               }
             ]
           },
@@ -1340,13 +1340,13 @@
                 "idTestcase": "3",
                 "title": "tc3",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               }
             ]
           },
@@ -1738,13 +1738,13 @@
                 "idTestcase": "3",
                 "title": "tc3",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               }
             ]
           },

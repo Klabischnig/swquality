@@ -559,7 +559,7 @@
             "idTestcase": "32",
             "title": "tc32",
             "result": "passed",
-            "isFlaky": "true"
+            "isFlaky": "false"
           }
         ]
       }
@@ -696,7 +696,7 @@
             "idTestcase": "32",
             "title": "tc32",
             "result": "passed",
-            "isFlaky": "true"
+            "isFlaky": "false"
           }
         ]
       }
@@ -833,7 +833,7 @@
             "idTestcase": "32",
             "title": "tc32",
             "result": "passed",
-            "isFlaky": "true"
+            "isFlaky": "false"
           }
         ]
       }
@@ -1072,7 +1072,7 @@
             "idTestcase": "32",
             "title": "tc32",
             "result": "passed",
-            "isFlaky": "true"
+            "isFlaky": "false"
           }
         ]
       }
@@ -1137,7 +1137,7 @@
             "idTestcase": "32",
             "title": "tc32",
             "result": "passed",
-            "isFlaky": "true"
+            "isFlaky": "false"
           }
         ]
       }
@@ -1202,7 +1202,7 @@
             "idTestcase": "32",
             "title": "tc32",
             "result": "passed",
-            "isFlaky": "true"
+            "isFlaky": "false"
           }
         ]
       }
@@ -1267,7 +1267,7 @@
             "idTestcase": "32",
             "title": "tc32",
             "result": "passed",
-            "isFlaky": "true"
+            "isFlaky": "false"
           }
         ]
       }

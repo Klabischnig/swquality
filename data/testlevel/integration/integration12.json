@@ -956,7 +956,7 @@
             "idTestcase": "34",
             "title": "tc34",
             "result": "passed",
-            "isFlaky": "true"
+            "isFlaky": "false"
           },
           {
             "idTestcase": "35",
@@ -1430,7 +1430,7 @@
             "idTestcase": "34",
             "title": "tc34",
             "result": "passed",
-            "isFlaky": "true"
+            "isFlaky": "false"
           },
           {
             "idTestcase": "35",
@@ -1669,7 +1669,7 @@
             "idTestcase": "34",
             "title": "tc34",
             "result": "passed",
-            "isFlaky": "true"
+            "isFlaky": "false"
           },
           {
             "idTestcase": "35",
@@ -1752,7 +1752,7 @@
             "idTestcase": "34",
             "title": "tc34",
             "result": "passed",
-            "isFlaky": "true"
+            "isFlaky": "false"
           },
           {
             "idTestcase": "35",
@@ -1912,7 +1912,7 @@
             "idTestcase": "34",
             "title": "tc34",
             "result": "passed",
-            "isFlaky": "true"
+            "isFlaky": "false"
           },
           {
             "idTestcase": "35",

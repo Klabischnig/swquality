@@ -1369,7 +1369,7 @@
                 "idTestcase": "23",
                 "title": "tc23",
                 "result": "not executed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "24",
@@ -1397,7 +1397,7 @@
                 "idTestcase": "23",
                 "title": "tc23",
                 "result": "not executed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "24",

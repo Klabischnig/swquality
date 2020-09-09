@@ -938,7 +938,7 @@
                 "idTestcase": "21",
                 "title": "tc21",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "22",
@@ -1049,7 +1049,7 @@
                 "idTestcase": "21",
                 "title": "tc21",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "22",
@@ -1132,7 +1132,7 @@
                 "idTestcase": "21",
                 "title": "tc21",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "22",
@@ -1215,7 +1215,7 @@
                 "idTestcase": "21",
                 "title": "tc21",
                 "result": "failed",
-                "isFlaky": "true"
+                "isFlaky": "false"
               },
               {
                 "idTestcase": "22",

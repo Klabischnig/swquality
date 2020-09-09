@@ -19,7 +19,7 @@
           "numberOfDefects": "2",
           "testcoverage": "85",
           "idRelease": "1",
-          "hasFlakyTests": "integration, acceptance"
+          "hasFlakyTests": ""
         },
         {
           "idComponent": "3",
@@ -28,7 +28,7 @@
           "numberOfDefects": "6",
           "testcoverage": "83.1",
           "idRelease": "1",
-          "hasFlakyTests": "system"
+          "hasFlakyTests": ""
         },
         {
           "idComponent": "4",
@@ -37,7 +37,7 @@
           "numberOfDefects": "6",
           "testcoverage": "84.92",
           "idRelease": "1",
-          "hasFlakyTests": "system"
+          "hasFlakyTests": ""
         }
       ]
     },
@@ -60,7 +60,7 @@
           "numberOfDefects": "1",
           "testcoverage": "88.88",
           "idRelease": "1",
-          "hasFlakyTests": "integration"
+          "hasFlakyTests": ""
         }
       ]
     },
@@ -74,7 +74,7 @@
           "numberOfDefects": "3",
           "testcoverage": "57.75",
           "idRelease": "1",
-          "hasFlakyTests": "acceptance"
+          "hasFlakyTests": ""
         },
         {
           "idComponent": "10",
@@ -83,7 +83,7 @@
           "numberOfDefects": "3",
           "testcoverage": "84",
           "idRelease": "1",
-          "hasFlakyTests": "acceptance"
+          "hasFlakyTests": ""
         },
         {
           "idComponent": "11",
@@ -115,7 +115,7 @@
           "numberOfDefects": "3",
           "testcoverage": "95",
           "idRelease": "1",
-          "hasFlakyTests": "acceptance"
+          "hasFlakyTests": ""
         },
         {
           "idComponent": "17",
@@ -124,7 +124,7 @@
           "numberOfDefects": "3",
           "testcoverage": "1",
           "idRelease": "1",
-          "hasFlakyTests": "acceptance"
+          "hasFlakyTests": ""
         },
         {
           "idComponent": "18",
@@ -174,7 +174,7 @@
           "numberOfDefects": "3",
           "testcoverage": "81.66",
           "idRelease": "1",
-          "hasFlakyTests": "acceptance"
+          "hasFlakyTests": ""
         },
         {
           "idComponent": "24",
@@ -183,7 +183,7 @@
           "numberOfDefects": "3",
           "testcoverage": "96",
           "idRelease": "1",
-          "hasFlakyTests": "acceptance"
+          "hasFlakyTests": ""
         },
         {
           "idComponent": "25",
