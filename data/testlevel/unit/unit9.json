@@ -925,7 +925,7 @@
               {
                 "idTestcase": "19",
                 "title": "tc19",
-                "result": "passed,
+                "result": "passed",
                 "isFlaky": "false"
               },
               {

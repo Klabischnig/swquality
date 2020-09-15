@@ -5,11 +5,11 @@
  {"idTestexecution":"4", "testexecutionStamp":"2019-01-02 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.0"},
  {"idTestexecution":"5", "testexecutionStamp":"2019-01-02 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.0"},
  {"idTestexecution":"6", "testexecutionStamp":"2019-01-02 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.0"},
- {"idTestexecution":"7", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.0"},
- {"idTestexecution":"8", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.0"},
- {"idTestexecution":"9", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.0"},
- {"idTestexecution":"10", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.0"},
- {"idTestexecution":"11", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.0"},
- {"idTestexecution":"12", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.0"},
- {"idTestexecution":"13", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.0"}
+ {"idTestexecution":"7", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.1"},
+ {"idTestexecution":"8", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.1"},
+ {"idTestexecution":"9", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.1"},
+ {"idTestexecution":"10", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.1"},
+ {"idTestexecution":"11", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.1"},
+ {"idTestexecution":"12", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.1"},
+ {"idTestexecution":"13", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"1", "releaseStamp":"2019-01-01 00:00:00", "version":"1.1"}
 ]
