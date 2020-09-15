@@ -13,10 +13,12 @@ html, body{
 }
 
 h1 {
+	text-align: center;
 	font-size: 1.5em;
 	display:inline;
 }
 h2 {
+	text-align: center;
 	font-size: .8em;
 }
    
@@ -178,7 +180,9 @@ border-bottom: 1px dashed black;}
 #integration{top: 50%; left: 0; right: 50%; bottom: 14%;
 border-right: 1px dashed black;}
 #acceptance{top: 50%; left: 50%; right: 0; bottom: 14%}
-#slider_execution{top:89%; left:0%; right:0%; bottom:0%}
+#slider_execution{
+	text-align: center;
+	top:89%; left:0%; right:0%; bottom:0%}
 
 /************************ testset *************************/
 

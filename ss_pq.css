@@ -13,10 +13,12 @@ html, body{
 }
 
 h1 {
+	text-align: center;
 	font-size: 1.5em;
 	display:inline;
 }
 h2 {
+	text-align: center;
 	font-size: .8em;
 }
    
