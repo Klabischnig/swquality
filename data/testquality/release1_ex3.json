@@ -133,7 +133,7 @@
           "numberOfDefects": "0",
           "testcoverage": "3",
           "idRelease": "1",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "unit"
         }
       ]
     }
