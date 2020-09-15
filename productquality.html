@@ -357,15 +357,16 @@ d3.json("./data/systemrelease.json", function(data_release) {
 			update_config_panel(current_release, root);
 		 		
 	 		/* plot the components */
-	 		update_components(current_release, root);
+	 		updateComponents(current_release, root);
+	 		updateSlider(current_release);
 		})	
+		
 	}
  	
 }) //end of reading release data
 
 /* update treemap with components */
-function update_components(current_release, root){
-	
+function updateComponents(current_release, root){
 
 	d3.selectAll("rect").remove();
 	
