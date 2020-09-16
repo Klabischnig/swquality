@@ -83,7 +83,7 @@
           "numberOfDefects": "3",
           "testcoverage": "84",
           "idRelease": "1",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "acceptance"
         },
         {
           "idComponent": "11",

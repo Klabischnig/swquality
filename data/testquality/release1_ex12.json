@@ -106,7 +106,7 @@
           "numberOfDefects": "20",
           "testcoverage": "30",
           "idRelease": "1",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "acceptance"
         },
         {
           "idComponent": "19",

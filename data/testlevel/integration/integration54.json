@@ -1350,7 +1350,7 @@
               {
                 "idTestcase": "24",
                 "title": "tc24",
-                "result": "passed",
+                "result": "failed",
                 "isFlaky": "true"
               }
             ]

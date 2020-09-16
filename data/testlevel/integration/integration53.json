@@ -1292,8 +1292,8 @@
               {
                 "idTestcase": "24",
                 "title": "tc24",
-                "result": "failed",
-                "isFlaky": "true"
+                "result": "passed",
+                "isFlaky": "false"
               }
             ]
           }

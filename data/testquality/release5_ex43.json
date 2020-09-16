@@ -205,7 +205,7 @@
           "numberOfDefects": "2",
           "testcoverage": "27.14",
           "idRelease": "5",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "acceptance"
         }
       ]
     },
