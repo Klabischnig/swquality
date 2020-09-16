@@ -246,7 +246,7 @@
           "numberOfDefects": "22",
           "testcoverage": "82.47",
           "idRelease": "5",
-          "hasFlakyTests": "integration"
+          "hasFlakyTests": ""
         },
         {
           "idComponent": "26",
