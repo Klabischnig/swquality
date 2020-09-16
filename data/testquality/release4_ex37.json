@@ -60,7 +60,7 @@
           "numberOfDefects": "2",
           "testcoverage": "88.88",
           "idRelease": "4",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "system"
         }
       ]
     },

@@ -74,7 +74,7 @@
           "numberOfDefects": "3",
           "testcoverage": "57.75",
           "idRelease": "1",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "system"
         },
         {
           "idComponent": "8",

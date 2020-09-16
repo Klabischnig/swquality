@@ -51,7 +51,7 @@
           "numberOfDefects": "1",
           "testcoverage": "97.2",
           "idRelease": "4",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "system"
         },
         {
           "idComponent": "6",
