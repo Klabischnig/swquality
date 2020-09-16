@@ -98,10 +98,7 @@ function expand(){
     })
     .enter()
     .append("li")
-    .text(function (d,i) {
-    	console.log(d)
-    	console.log(i)
-    	
+    .text(function (d,i) {    	
     	switch (i) {
     	case 0:
     		return "Id: " + d;
@@ -116,6 +113,8 @@ function expand(){
 	    	else {
 	    		return "not flaky";
 	    	}
+    	case 4: 
+    		return "Execution Time: " + d;
     	}
     })
 }
