@@ -92,7 +92,7 @@
           "numberOfDefects": "0",
           "testcoverage": "9",
           "idRelease": "5",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "integration"
         },
         {
           "idComponent": "10",
@@ -142,7 +142,7 @@
           "numberOfDefects": "1",
           "testcoverage": "97.84",
           "idRelease": "5",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "integration"
         },
         {
           "idComponent": "15",
