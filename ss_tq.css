@@ -52,14 +52,14 @@ a:active {
 	text-align: center;
 	font-size: .8em;
 	width: 160px;
-	background-color:#d3d3d3;
-	border:1px solid #c0c0c0;
-	border-radius:6px;
-	display:inline-block;
-	cursor:pointer;
+	background-color: #d3d3d3;
+	border: 1px solid #c0c0c0;
+	border-radius: 6px;
+	display: inline-block;
+	cursor: pointer;
 	color: #000;
-	padding:6px 24px;
-	opacity:0.7;
+	padding: 6px 24px;
+	opacity: 0.7;
 }
 .myButton:hover {
 	opacity:1;
@@ -68,6 +68,27 @@ a:active {
 	opacity:1;
 }
 
+.arrowButton {
+	text-align: center;
+	font-size: .8em;
+	width: 30px;
+	height: 30px;
+	background-color: #d3d3d3;
+	border-radius: 6px;
+	border: 1px, solid #c0c0c0;
+	display: inline-block;
+	cursor: pointer;
+	color: #000;
+	opacity: 0.7;
+}
+
+.arrowButton:hover {
+  opacity: 1;	
+}
+
+.arrowButton:active {
+	opacity: 1;
+}
 /************************* slider *************************/
 
 .slider {

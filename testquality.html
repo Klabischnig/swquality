@@ -49,8 +49,8 @@
 <center>
 <div id="slider_execution" >
    <button class="myButton" type="button" id="btn_play">Play</button>
-   <button class="arrowButton" type="button" id="btn_prev_ex">&#8678;</button>
-   <button class="arrowButton" type="button" id="btn_next_ex">&#8680;</button>
+   <button class="arrowButton" type="button" id="btn_prev_ex">&lt;</button>
+   <button class="arrowButton" type="button" id="btn_next_ex">&gt;</button>
    
     <input type="range"class="slider" id="range_execution">
     <button class="myButton" type="button" id="btn_flaky">Show Flaky-Tests</button>
@@ -224,7 +224,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 			current_execution--;
 		}
 		updateSlider(current_execution, data_executions[current_execution-1]);
-		updateTreepmaps(current_execution);
+		updateTreemaps(current_execution);
 	})
 	
 	/* listen on left arrow button */
@@ -237,7 +237,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 			current_execution++;
 		}
 		updateSlider(current_execution, data_executions[current_execution-1]);
-		updateTreepmaps(current_execution);
+		updateTreemaps(current_execution);
 	})
 	
 	/** listen on flaky button */
