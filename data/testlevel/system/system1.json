@@ -26,25 +26,25 @@
               {
                 "idTestcase": "1",
                 "title": "tc1",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "2",
                 "title": "tc2",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "3",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -67,7 +67,7 @@
               {
                 "idTestcase": "7",
                 "title": "tc7",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -103,25 +103,25 @@
               {
                 "idTestcase": "1",
                 "title": "tc1",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "2",
                 "title": "tc2",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "3",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -138,13 +138,13 @@
               {
                 "idTestcase": "6",
                 "title": "tc6",
-                "result": "passed",
+                "result": "failed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "7",
                 "title": "tc7",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -161,19 +161,19 @@
               {
                 "idTestcase": "14",
                 "title": "tc14",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "15",
                 "title": "tc15",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "16",
                 "title": "tc16",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -223,25 +223,25 @@
               {
                 "idTestcase": "1",
                 "title": "tc1",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "2",
                 "title": "tc2",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "3",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -264,7 +264,7 @@
               {
                 "idTestcase": "7",
                 "title": "tc7",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -281,19 +281,19 @@
               {
                 "idTestcase": "14",
                 "title": "tc14",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "15",
                 "title": "tc15",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "16",
                 "title": "tc16",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -309,7 +309,7 @@
           {
             "idTestcase": "32",
             "title": "tc32",
-            "result": "passed",
+            "result": "not executed",
             "isFlaky": "false"
           }
         ]
@@ -329,19 +329,19 @@
               {
                 "idTestcase": "14",
                 "title": "tc14",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "15",
                 "title": "tc15",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "16",
                 "title": "tc16",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -377,19 +377,19 @@
               {
                 "idTestcase": "14",
                 "title": "tc14",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "15",
                 "title": "tc15",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "16",
                 "title": "tc16",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -425,13 +425,13 @@
               {
                 "idTestcase": "17",
                 "title": "tc17",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "18",
                 "title": "tc18",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -448,25 +448,25 @@
               {
                 "idTestcase": "19",
                 "title": "tc19",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "20",
                 "title": "tc20",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "21",
                 "title": "tc21",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "22",
                 "title": "tc22",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -508,13 +508,13 @@
               {
                 "idTestcase": "17",
                 "title": "tc17",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "18",
                 "title": "tc18",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -536,13 +536,13 @@
               {
                 "idTestcase": "17",
                 "title": "tc17",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "18",
                 "title": "tc18",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -559,25 +559,25 @@
               {
                 "idTestcase": "19",
                 "title": "tc19",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "20",
                 "title": "tc20",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "21",
                 "title": "tc21",
-                "result": "failed",
+                "result": "not executed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "22",
                 "title": "tc22",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -593,7 +593,7 @@
           {
             "idTestcase": "34",
             "title": "tc34",
-            "result": "passed",
+            "result": "failed",
             "isFlaky": "false"
           },
           {

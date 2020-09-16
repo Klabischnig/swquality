@@ -10,7 +10,7 @@
           "numberOfDefects": "10",
           "testcoverage": "90",
           "idRelease": "1",
-          "hasFlakyTests": ""
+          "hasFlakyTests": "system"
         },
         {
           "idComponent": "2",

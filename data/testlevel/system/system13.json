@@ -152,7 +152,7 @@
             "idTestcase": "28",
             "title": "tc28",
             "result": "failed",
-            "isFlaky": "false"
+            "isFlaky": "true"
           },
           {
             "idTestcase": "29",
@@ -169,7 +169,7 @@
               {
                 "idTestcase": "1",
                 "title": "tc1",
-                "result": "passed",
+                "result": "failed",
                 "isFlaky": "false"
               },
               {
