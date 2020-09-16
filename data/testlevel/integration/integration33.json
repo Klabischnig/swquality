@@ -12,25 +12,25 @@
               {
                 "idTestcase": "1",
                 "title": "tc1",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "2",
                 "title": "tc2",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "3",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -53,7 +53,7 @@
               {
                 "idTestcase": "7",
                 "title": "tc7",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -84,25 +84,25 @@
               {
                 "idTestcase": "10",
                 "title": "tc10",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "11",
                 "title": "tc11",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "12",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "13",
                 "title": "tc4",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -125,7 +125,7 @@
               {
                 "idTestcase": "7",
                 "title": "tc7",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -155,25 +155,25 @@
               {
                 "idTestcase": "1",
                 "title": "tc1",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "2",
                 "title": "tc2",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "3",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -196,7 +196,7 @@
               {
                 "idTestcase": "7",
                 "title": "tc7",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -227,25 +227,25 @@
               {
                 "idTestcase": "10",
                 "title": "tc10",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "11",
                 "title": "tc11",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "12",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "13",
                 "title": "tc4",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -268,7 +268,7 @@
               {
                 "idTestcase": "7",
                 "title": "tc7",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -298,25 +298,25 @@
               {
                 "idTestcase": "1",
                 "title": "tc1",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "2",
                 "title": "tc2",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "3",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -339,7 +339,7 @@
               {
                 "idTestcase": "7",
                 "title": "tc7",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -370,25 +370,25 @@
               {
                 "idTestcase": "10",
                 "title": "tc10",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "11",
                 "title": "tc11",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "12",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "13",
                 "title": "tc4",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -411,7 +411,7 @@
               {
                 "idTestcase": "7",
                 "title": "tc7",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -441,25 +441,25 @@
               {
                 "idTestcase": "1",
                 "title": "tc1",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "2",
                 "title": "tc2",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "3",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -482,7 +482,7 @@
               {
                 "idTestcase": "7",
                 "title": "tc7",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -513,36 +513,19 @@
               {
                 "idTestcase": "14",
                 "title": "tc14",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "15",
                 "title": "tc15",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "16",
                 "title": "tc16",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          },
-          {
-            "idTestsuite": "9",
-            "testcases": [
-              {
-                "idTestcase": "41",
-                "title": "tc41",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "42",
-                "title": "tc15",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -578,25 +561,25 @@
               {
                 "idTestcase": "1",
                 "title": "tc1",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "2",
                 "title": "tc2",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "3",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -619,7 +602,7 @@
               {
                 "idTestcase": "7",
                 "title": "tc7",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -650,36 +633,19 @@
               {
                 "idTestcase": "14",
                 "title": "tc14",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "15",
                 "title": "tc15",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "16",
                 "title": "tc16",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          },
-          {
-            "idTestsuite": "9",
-            "testcases": [
-              {
-                "idTestcase": "41",
-                "title": "tc41",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "42",
-                "title": "tc15",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -715,25 +681,25 @@
               {
                 "idTestcase": "1",
                 "title": "tc1",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "2",
                 "title": "tc2",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "3",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "4",
                 "title": "tc4",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -756,7 +722,7 @@
               {
                 "idTestcase": "7",
                 "title": "tc7",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -787,36 +753,19 @@
               {
                 "idTestcase": "14",
                 "title": "tc14",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "15",
                 "title": "tc15",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "16",
                 "title": "tc16",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          },
-          {
-            "idTestsuite": "9",
-            "testcases": [
-              {
-                "idTestcase": "41",
-                "title": "tc41",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "42",
-                "title": "tc15",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -843,34 +792,28 @@
     "idComponent": "7",
     "testsets": [
       {
-        "idTestset": "5",
-        "title": "ts5",
+        "idTestset": "3",
+        "title": "ts3",
         "testsuites": [
           {
-            "idTestsuite": "7",
+            "idTestsuite": "3",
             "testcases": [
               {
-                "idTestcase": "19",
-                "title": "tc19",
-                "result": "not executed",
+                "idTestcase": "14",
+                "title": "tc14",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
-                "idTestcase": "20",
-                "title": "tc20",
-                "result": "failed",
+                "idTestcase": "15",
+                "title": "tc15",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
-                "idTestcase": "21",
-                "title": "tc21",
-                "result": "failed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "22",
-                "title": "tc22",
-                "result": "failed",
+                "idTestcase": "16",
+                "title": "tc16",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -878,126 +821,15 @@
         ],
         "testcases": [
           {
-            "idTestcase": "33",
-            "title": "tc33",
+            "idTestcase": "31",
+            "title": "tc31",
             "result": "passed",
             "isFlaky": "false"
           },
           {
-            "idTestcase": "34",
-            "title": "tc34",
+            "idTestcase": "32",
+            "title": "tc32",
             "result": "passed",
-            "isFlaky": "false"
-          },
-          {
-            "idTestcase": "35",
-            "title": "tc35",
-            "result": "passed",
-            "isFlaky": "false"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "idComponent": "7",
-    "testsets": [
-      {
-        "idTestset": "5",
-        "title": "ts5",
-        "testsuites": [
-          {
-            "idTestsuite": "7",
-            "testcases": [
-              {
-                "idTestcase": "19",
-                "title": "tc19",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "20",
-                "title": "tc20",
-                "result": "failed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "21",
-                "title": "tc21",
-                "result": "failed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "22",
-                "title": "tc22",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          }
-        ],
-        "testcases": [
-          {
-            "idTestcase": "33",
-            "title": "tc33",
-            "result": "passed",
-            "isFlaky": "false"
-          },
-          {
-            "idTestcase": "34",
-            "title": "tc34",
-            "result": "passed",
-            "isFlaky": "false"
-          },
-          {
-            "idTestcase": "35",
-            "title": "tc35",
-            "result": "passed",
-            "isFlaky": "false"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "idComponent": "8",
-    "testsets": [
-      {
-        "idTestset": "4",
-        "title": "ts4",
-        "testsuites": [
-          {
-            "idTestsuite": "6",
-            "testcases": [
-              {
-                "idTestcase": "17",
-                "title": "tc17",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "18",
-                "title": "tc18",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "idTestsuite": "8",
-        "testcases": [
-          {
-            "idTestcase": "23",
-            "title": "tc23",
-            "result": "not executed",
-            "isFlaky": "false"
-          },
-          {
-            "idTestcase": "24",
-            "title": "tc24",
-            "result": "failed",
             "isFlaky": "false"
           }
         ]
@@ -1017,36 +849,19 @@
               {
                 "idTestcase": "14",
                 "title": "tc14",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "15",
                 "title": "tc15",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "16",
                 "title": "tc16",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          },
-          {
-            "idTestsuite": "9",
-            "testcases": [
-              {
-                "idTestcase": "41",
-                "title": "tc41",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "42",
-                "title": "tc15",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1073,201 +888,6 @@
     "idComponent": "11",
     "testsets": [
       {
-        "idTestset": "3",
-        "title": "ts3",
-        "testsuites": [
-          {
-            "idTestsuite": "3",
-            "testcases": [
-              {
-                "idTestcase": "14",
-                "title": "tc14",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "15",
-                "title": "tc15",
-                "result": "failed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "16",
-                "title": "tc16",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          },
-          {
-            "idTestsuite": "9",
-            "testcases": [
-              {
-                "idTestcase": "41",
-                "title": "tc41",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "42",
-                "title": "tc15",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          }
-        ],
-        "testcases": [
-          {
-            "idTestcase": "31",
-            "title": "tc31",
-            "result": "passed",
-            "isFlaky": "false"
-          },
-          {
-            "idTestcase": "32",
-            "title": "tc32",
-            "result": "passed",
-            "isFlaky": "false"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "idComponent": "12",
-    "testsets": [
-      {
-        "idTestset": "3",
-        "title": "ts3",
-        "testsuites": [
-          {
-            "idTestsuite": "3",
-            "testcases": [
-              {
-                "idTestcase": "14",
-                "title": "tc14",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "15",
-                "title": "tc15",
-                "result": "failed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "16",
-                "title": "tc16",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          },
-          {
-            "idTestsuite": "9",
-            "testcases": [
-              {
-                "idTestcase": "41",
-                "title": "tc41",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "42",
-                "title": "tc15",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          }
-        ],
-        "testcases": [
-          {
-            "idTestcase": "31",
-            "title": "tc31",
-            "result": "passed",
-            "isFlaky": "false"
-          },
-          {
-            "idTestcase": "32",
-            "title": "tc32",
-            "result": "passed",
-            "isFlaky": "false"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "idComponent": "14",
-    "testsets": [
-      {
-        "idTestset": "3",
-        "title": "ts3",
-        "testsuites": [
-          {
-            "idTestsuite": "3",
-            "testcases": [
-              {
-                "idTestcase": "14",
-                "title": "tc14",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "15",
-                "title": "tc15",
-                "result": "failed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "16",
-                "title": "tc16",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          },
-          {
-            "idTestsuite": "9",
-            "testcases": [
-              {
-                "idTestcase": "41",
-                "title": "tc41",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "42",
-                "title": "tc15",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          }
-        ],
-        "testcases": [
-          {
-            "idTestcase": "31",
-            "title": "tc31",
-            "result": "passed",
-            "isFlaky": "false"
-          },
-          {
-            "idTestcase": "32",
-            "title": "tc32",
-            "result": "passed",
-            "isFlaky": "false"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "idComponent": "15",
-    "testsets": [
-      {
         "idTestset": "4",
         "title": "ts4",
         "testsuites": [
@@ -1277,13 +897,13 @@
               {
                 "idTestcase": "17",
                 "title": "tc17",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "18",
                 "title": "tc18",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1300,25 +920,25 @@
               {
                 "idTestcase": "19",
                 "title": "tc19",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "20",
                 "title": "tc20",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "21",
                 "title": "tc21",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "22",
                 "title": "tc22",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1348,7 +968,7 @@
     ]
   },
   {
-    "idComponent": "17",
+    "idComponent": "12",
     "testsets": [
       {
         "idTestset": "4",
@@ -1360,13 +980,41 @@
               {
                 "idTestcase": "17",
                 "title": "tc17",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "18",
                 "title": "tc18",
                 "result": "failed",
+                "isFlaky": "false"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idComponent": "15",
+    "testsets": [
+      {
+        "idTestset": "4",
+        "title": "ts4",
+        "testsuites": [
+          {
+            "idTestsuite": "6",
+            "testcases": [
+              {
+                "idTestcase": "17",
+                "title": "tc17",
+                "result": "passed",
+                "isFlaky": "false"
+              },
+              {
+                "idTestcase": "18",
+                "title": "tc18",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1388,16 +1036,71 @@
               {
                 "idTestcase": "17",
                 "title": "tc17",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "18",
                 "title": "tc18",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
+          }
+        ]
+      },
+      {
+        "idTestset": "5",
+        "title": "ts5",
+        "testsuites": [
+          {
+            "idTestsuite": "7",
+            "testcases": [
+              {
+                "idTestcase": "19",
+                "title": "tc19",
+                "result": "passed",
+                "isFlaky": "false"
+              },
+              {
+                "idTestcase": "20",
+                "title": "tc20",
+                "result": "passed",
+                "isFlaky": "false"
+              },
+              {
+                "idTestcase": "21",
+                "title": "tc21",
+                "result": "passed",
+                "isFlaky": "false"
+              },
+              {
+                "idTestcase": "22",
+                "title": "tc22",
+                "result": "passed",
+                "isFlaky": "false"
+              }
+            ]
+          }
+        ],
+        "testcases": [
+          {
+            "idTestcase": "33",
+            "title": "tc33",
+            "result": "passed",
+            "isFlaky": "false"
+          },
+          {
+            "idTestcase": "34",
+            "title": "tc34",
+            "result": "passed",
+            "isFlaky": "false"
+          },
+          {
+            "idTestcase": "35",
+            "title": "tc35",
+            "result": "passed",
+            "isFlaky": "false"
           }
         ]
       }
@@ -1416,13 +1119,13 @@
               {
                 "idTestcase": "17",
                 "title": "tc17",
-                "result": "not executed",
-                "isFlaky": "false"
+                "result": "failed",
+                "isFlaky": "true"
               },
               {
                 "idTestcase": "18",
                 "title": "tc18",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1439,25 +1142,25 @@
               {
                 "idTestcase": "19",
                 "title": "tc19",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "20",
                 "title": "tc20",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "21",
                 "title": "tc21",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "22",
                 "title": "tc22",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1499,13 +1202,13 @@
               {
                 "idTestcase": "17",
                 "title": "tc17",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "18",
                 "title": "tc18",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1522,25 +1225,25 @@
               {
                 "idTestcase": "19",
                 "title": "tc19",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "20",
                 "title": "tc20",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "21",
                 "title": "tc21",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "22",
                 "title": "tc22",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1582,13 +1285,13 @@
               {
                 "idTestcase": "17",
                 "title": "tc17",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "18",
                 "title": "tc18",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1605,25 +1308,25 @@
               {
                 "idTestcase": "19",
                 "title": "tc19",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "20",
                 "title": "tc20",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "21",
                 "title": "tc21",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "22",
                 "title": "tc22",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1653,34 +1356,6 @@
     ]
   },
   {
-    "idComponent": "23",
-    "testsets": [
-      {
-        "idTestset": "7",
-        "title": "ts7",
-        "testsuites": [
-          {
-            "idTestsuite": "8",
-            "testcases": [
-              {
-                "idTestcase": "23",
-                "title": "tc23",
-                "result": "not executed",
-                "isFlaky": "false"
-              },
-              {
-                "idTestcase": "24",
-                "title": "tc24",
-                "result": "failed",
-                "isFlaky": "false"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "idComponent": "24",
     "testsets": [
       {
@@ -1693,13 +1368,13 @@
               {
                 "idTestcase": "23",
                 "title": "tc23",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "24",
                 "title": "tc24",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1721,13 +1396,13 @@
               {
                 "idTestcase": "23",
                 "title": "tc23",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "24",
                 "title": "tc24",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1749,19 +1424,19 @@
               {
                 "idTestcase": "25",
                 "title": "tc25",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "26",
                 "title": "tc26",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "27",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1795,44 +1470,44 @@
               {
                 "idTestcase": "39",
                 "title": "tc39",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "40",
                 "title": "tc40",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "41",
                 "title": "tc41",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
           }
+        ],
+        "testcases": [
+          {
+            "idTestcase": "42",
+            "title": "tc42",
+            "result": "passed",
+            "isFlaky": "false"
+          },
+          {
+            "idTestcase": "43",
+            "title": "tc43",
+            "result": "passed",
+            "isFlaky": "false"
+          },
+          {
+            "idTestcase": "44",
+            "title": "tc44",
+            "result": "passed",
+            "isFlaky": "false"
+          }
         ]
-      }
-    ],
-    "testcases": [
-      {
-        "idTestcase": "42",
-        "title": "tc42",
-        "result": "passed",
-        "isFlaky": "false"
-      },
-      {
-        "idTestcase": "43",
-        "title": "tc43",
-        "result": "passed",
-        "isFlaky": "false"
-      },
-      {
-        "idTestcase": "44",
-        "title": "tc44",
-        "result": "passed",
-        "isFlaky": "false"
       }
     ]
   },
@@ -1849,19 +1524,19 @@
               {
                 "idTestcase": "25",
                 "title": "tc25",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "26",
                 "title": "tc26",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "27",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1895,19 +1570,19 @@
               {
                 "idTestcase": "39",
                 "title": "tc39",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "40",
                 "title": "tc40",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "41",
                 "title": "tc41",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1949,19 +1624,19 @@
               {
                 "idTestcase": "25",
                 "title": "tc25",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "26",
                 "title": "tc26",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "27",
                 "title": "tc3",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
@@ -1995,19 +1670,19 @@
               {
                 "idTestcase": "39",
                 "title": "tc39",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "40",
                 "title": "tc40",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "41",
                 "title": "tc41",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
