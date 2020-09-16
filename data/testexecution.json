@@ -38,5 +38,26 @@
  {"idTestexecution":"37", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"4", "releaseStamp":"2019-01-01 00:00:00", "version":"1.3"},
  {"idTestexecution":"38", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"4", "releaseStamp":"2019-01-01 00:00:00", "version":"1.3"},
  {"idTestexecution":"39", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"4", "releaseStamp":"2019-01-01 00:00:00", "version":"1.3"},
- {"idTestexecution":"40", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"4", "releaseStamp":"2019-01-01 00:00:00", "version":"1.3"}
+ {"idTestexecution":"40", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"4", "releaseStamp":"2019-01-01 00:00:00", "version":"1.3"},
+ {"idTestexecution":"41", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"5", "releaseStamp":"2019-01-01 00:00:00", "version":"2.0"},
+ {"idTestexecution":"42", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"5", "releaseStamp":"2019-01-01 00:00:00", "version":"2.0"},
+ {"idTestexecution":"43", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"5", "releaseStamp":"2019-01-01 00:00:00", "version":"2.0"},
+ {"idTestexecution":"44", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"5", "releaseStamp":"2019-01-01 00:00:00", "version":"2.0"},
+ {"idTestexecution":"45", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"5", "releaseStamp":"2019-01-01 00:00:00", "version":"2.0"},
+ {"idTestexecution":"46", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"5", "releaseStamp":"2019-01-01 00:00:00", "version":"2.0"},
+ {"idTestexecution":"47", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"5", "releaseStamp":"2019-01-01 00:00:00", "version":"2.0"},
+ {"idTestexecution":"48", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"5", "releaseStamp":"2019-01-01 00:00:00", "version":"2.0"},
+ {"idTestexecution":"49", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"6", "releaseStamp":"2019-01-01 00:00:00", "version":"2.1"},
+ {"idTestexecution":"50", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"6", "releaseStamp":"2019-01-01 00:00:00", "version":"2.1"},
+ {"idTestexecution":"51", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"6", "releaseStamp":"2019-01-01 00:00:00", "version":"2.1"},
+ {"idTestexecution":"52", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"6", "releaseStamp":"2019-01-01 00:00:00", "version":"2.1"},
+ {"idTestexecution":"53", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"6", "releaseStamp":"2019-01-01 00:00:00", "version":"2.1"},
+ {"idTestexecution":"54", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"6", "releaseStamp":"2019-01-01 00:00:00", "version":"2.1"},
+ {"idTestexecution":"55", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"6", "releaseStamp":"2019-01-01 00:00:00", "version":"2.1"},
+ {"idTestexecution":"56", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"6", "releaseStamp":"2019-01-01 00:00:00", "version":"2.1"},
+ {"idTestexecution":"57", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"6", "releaseStamp":"2019-01-01 00:00:00", "version":"2.1"},
+ {"idTestexecution":"58", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"6", "releaseStamp":"2019-01-01 00:00:00", "version":"2.1"},
+ {"idTestexecution":"59", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"6", "releaseStamp":"2019-01-01 00:00:00", "version":"2.1"},
+ {"idTestexecution":"60", "testexecutionStamp":"2019-03-05 00:00:00", "idRelease":"6", "releaseStamp":"2019-01-01 00:00:00", "version":"2.1"}
+
 ]
