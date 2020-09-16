@@ -1494,13 +1494,13 @@
               {
                 "idTestcase": "21",
                 "title": "tc21",
-                "result": "failed",
+                "result": "passed",
                 "isFlaky": "false"
               },
               {
                 "idTestcase": "22",
                 "title": "tc22",
-                "result": "not executed",
+                "result": "passed",
                 "isFlaky": "false"
               }
             ]
