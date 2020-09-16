@@ -355,7 +355,7 @@
           {
             "idTestcase": "29",
             "title": "tc29",
-            "result": "not executed,
+            "result": "not executed",
             "isFlaky": "false"
           }
         ]
