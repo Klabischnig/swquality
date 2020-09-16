@@ -119,7 +119,7 @@
           "numberOfDefects": "0",
           "testcoverage": "31.4",
           "idRelease": "5",
-          "hasFlakyTests": "unit"
+          "hasFlakyTests": ""
         },
         {
           "idComponent": "13",
