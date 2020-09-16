@@ -18,6 +18,8 @@
 <h2><a href="productquality.html"> &#x2192; PRODUCTQUALITY</a></h2></center>
 </header>
 
+</head>
+
 <body>
 <div id="unit"> 
 	<button class="myButton" type="button" id="btn_close_unit">Close</button>
@@ -47,6 +49,8 @@
 <center>
 <div id="slider_execution" >
    <button class="myButton" type="button" id="btn_play">Play</button>
+   <button class="arrowButton" type="button" id="btn_prev_ex">&#8678;</button>
+   <button class="arrowButton" type="button" id="btn_next_ex">&#8680;</button>
    
     <input type="range"class="slider" id="range_execution">
     <button class="myButton" type="button" id="btn_flaky">Show Flaky-Tests</button>
@@ -57,7 +61,7 @@
 	<p>Release ID: <span id="idRelease"></span></p>
 	<p>Timestamp (Release): <span id="releaseTimestamp"></span></p>
 	<p>Version: <span id="version"></span></p>
-	
+	<div id="stackresults"></div>
 	</details>
 	
 	<details>
@@ -210,6 +214,32 @@ d3.json("./data/testexecution.json", function(data_executions) {
 		play_timer.restart(updateExecution, 2500);
 	}
 	
+	/* listen on left arrow button */
+	var leftArrowButton = d3.select("#btn_prev_ex");
+	leftArrowButton.on("click", function(){
+		if (current_execution == min_execution){
+			current_execution = max_execution;
+		}
+		else {
+			current_execution--;
+		}
+		updateSlider(current_execution, data_executions[current_execution-1]);
+		updateTreepmaps(current_execution);
+	})
+	
+	/* listen on left arrow button */
+	var rightArrowButton = d3.select("#btn_next_ex");
+	rightArrowButton.on("click", function(){
+		if (current_execution == max_execution){
+			current_execution = min_execution;
+		}
+		else {
+			current_execution++;
+		}
+		updateSlider(current_execution, data_executions[current_execution-1]);
+		updateTreepmaps(current_execution);
+	})
+	
 	/** listen on flaky button */
 	var flaky_timer; 
 	var flaky_button = d3.select("#btn_flaky");
@@ -316,12 +346,12 @@ d3.json("./data/testexecution.json", function(data_executions) {
 			/* define root of hierarchical data (components)*/
 		 	var root = d3.hierarchy(data_releases)
 		 		.sum(function(d){ return 1 })
+		 	
 			/* plot the components */
 			svg_unit = updateTreemap(current_execution, root, "unit", svg_unit, width, height);
 		 	svg_system = updateTreemap(current_execution, root, "system", svg_system, width, height);
 		 	svg_integration = updateTreemap(current_execution, root, "integration", svg_integration, width, height);
 		 	svg_acceptance = updateTreemap(current_execution, root, "acceptance", svg_acceptance, width, height);
-		 
 		 	
 		 	//if close button was pressed - hide button again, and show the overview of the components
 		 	d3.select("#btn_close_unit").on("click", function(){
@@ -408,7 +438,6 @@ function updateExecutions(executions) {
 	document.getElementById("range_execution").max = max_execution;
 	document.getElementById("value_execution").value = current_execution;
 }
-
 
 
 
