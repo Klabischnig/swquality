@@ -211,6 +211,8 @@ d3.json("./data/systemrelease.json", function(data_release) {
 		slider_release.oninput = function ()  {
 			output_release.innerHTML = this.value;
 		}
+		value_timestamp.innerHTML = getTimestamp(release);
+		value_version.innerHTML = getVersion(release);
 	}
 	
 	/* init checkboxes */
@@ -332,21 +334,22 @@ d3.json("./data/systemrelease.json", function(data_release) {
 		else {
 			current_release--;
 		}
-		updateSlider(current_release, data_executions[current_execution-1]);
-		updateTreemaps(current_execution);
+		updateSlider(current_release);
+		updateTreemap(current_release);
+		
 	})
 	
 	/* listen on right arrow button */
 	var rightArrowButton = d3.select("#btn_next_ex");
 	rightArrowButton.on("click", function(){
-		if (current_execution == max_execution){
-			current_execution = min_execution;
+		if (current_release == max_release){
+			current_release = min_release;
 		}
 		else {
-			current_execution++;
+			current_release++;
 		}
-		updateSlider(current_execution, data_executions[current_execution-1]);
-		updateTreemaps(current_execution);
+		updateSlider(current_release);
+		updateTreemap(current_release);
 	})
 	
 	<!-- configuration panel -->
