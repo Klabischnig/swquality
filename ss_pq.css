@@ -172,13 +172,13 @@ a:active {
   background: rgba(211, 211, 211, 0.7);
   border: 1px solid #c0c0c0;
   border-radius: 6px;
-  width: 5px;
+  height: 5px;
   cursor: pointer;
 }
 
 .slidervert::-moz-range-thumb {
-  height:6px;
-  width: 15px;
+  width:6px;
+  height: 15px;
   background-color: #d3d3d3;
   border: 0.1px solid #c0c0c0;
   border-radius: 6px;
@@ -189,20 +189,19 @@ a:active {
   background: rgba(211, 211, 211, 0.7);
   border: 1px solid #c0c0c0;
   border-radius: 6px;
-  width: 5px;
+  height: 5px;
   cursor: pointer;
 }
 
 .slidervert::-webkit-slider-thumb {
   margin-top: -5px;
-  height: 6px;
-  width: 15px;
+  width:6px;
+  height: 15px;
   background-color: #d3d3d3;
   border: 0.1px solid #c0c0c0;
   border-radius: 6px;
   cursor: pointer;
   -webkit-appearance: none;
-  -webkit-transform: rotate(90deg);
 }
 
 /*** microsoft edge ***/
@@ -210,13 +209,13 @@ a:active {
   background: rgba(211, 211, 211, 0.7);
   border: 1px solid #c0c0c0;
   border-radius: 6px;
-  width: 5px;
+  height: 5px;
   cursor: pointer;
 }
 
 .slidervert::-ms-thumb {
-  height:6px;
-  width: 15px;
+  width:6px;
+  height: 15px;
   background-color: #d3d3d3;
   border: 0.1px solid #c0c0c0;
   border-radius: 6px;
