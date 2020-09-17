@@ -40,6 +40,8 @@
 
 <div id="slider_release" class="slider_release">
     <button class="myButton" type="button" id="btn_play">Play</button>
+    <button class="arrowButton" type="button" id="btn_prev_ex">&lt;</button>
+    <button class="arrowButton" type="button" id="btn_next_ex">&gt;</button>
     <br>
     <input type="range"class="slider" id="range_release">
     
@@ -320,6 +322,32 @@ d3.json("./data/systemrelease.json", function(data_release) {
 		
 		t.restart(update_release, 2500);
   	}
+	
+	/* listen on left arrow button */
+	var leftArrowButton = d3.select("#btn_prev_ex");
+	leftArrowButton.on("click", function(){
+		if (current_release == min_release){
+			current_release = max_release;
+		}
+		else {
+			current_release--;
+		}
+		updateSlider(current_release, data_executions[current_execution-1]);
+		updateTreemaps(current_execution);
+	})
+	
+	/* listen on right arrow button */
+	var rightArrowButton = d3.select("#btn_next_ex");
+	rightArrowButton.on("click", function(){
+		if (current_execution == max_execution){
+			current_execution = min_execution;
+		}
+		else {
+			current_execution++;
+		}
+		updateSlider(current_execution, data_executions[current_execution-1]);
+		updateTreemaps(current_execution);
+	})
 	
 	<!-- configuration panel -->
 	/* change values in configuration panel */

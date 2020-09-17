@@ -227,7 +227,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 		updateTreemaps(current_execution);
 	})
 	
-	/* listen on left arrow button */
+	/* listen on right arrow button */
 	var rightArrowButton = d3.select("#btn_next_ex");
 	rightArrowButton.on("click", function(){
 		if (current_execution == max_execution){
