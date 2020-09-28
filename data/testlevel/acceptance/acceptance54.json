@@ -1919,7 +1919,7 @@
                 "idTestcase": "25",
                 "title": "tc25",
                 "result": "passed",
-                "isFlaky": "true", "exTime": "1:00", "exTime": "1:00"
+                "isFlaky": "true", "exTime": "1:00"
               },
               {
                 "idTestcase": "26",

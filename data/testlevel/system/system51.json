@@ -1179,7 +1179,7 @@
                 "idTestcase": "41",
                 "title": "tc41",
                 "result": "passed",
-                "isFlaky": "true", "exTime": "1:00", "exTime": "1:00"
+                "isFlaky": "true", "exTime": "1:00"
               },
               {
                 "idTestcase": "42",

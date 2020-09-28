@@ -269,7 +269,7 @@ border-bottom: 1px dashed black;
 #config_panel{top: 55%; left: 81%; right: 4%; bottom: 0%;
 text-align: center;}
 
-/************************* table *************************/
+/************************* config panel *************************/
 
 #config_table {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -284,7 +284,7 @@ text-align: center;}
 }
 
 #config_table tr:nth-child(odd){
-	background: #00b300;
+	background: #yellow;
 }
 #config_table tr:nth-child(even){
 	background: #c30000;
