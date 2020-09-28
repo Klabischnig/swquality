@@ -284,7 +284,7 @@ text-align: center;}
 }
 
 #config_table tr:nth-child(odd){
-	background: #yellow;
+	background: yellow;
 }
 #config_table tr:nth-child(even){
 	background: #c30000;
