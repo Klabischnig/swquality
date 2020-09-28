@@ -104,6 +104,15 @@ function color (number_of_defects){
 	var low_risk = parseInt(d3.select("#low_risk").property("value"));
 	var high_risk = parseInt(d3.select("#high_risk").property("value"));
 	
+	if (low_risk < 1) {
+		alert("Please enter a positiv number!");
+		document.getElementById("low_risk").value = 1;
+	}
+	if (high_risk < 1) {
+		alert("Please enter a positiv number!");
+		document.getElementById("high_risk").value = 1;
+	}
+	
 	if (number_of_defects < low_risk) {
 		return ("#00b300");//green 
 	}
