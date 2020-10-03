@@ -305,14 +305,14 @@ d3.json("./data/systemrelease.json", function(data_release) {
 
 		var button = d3.select(this);
 		console.log(this);
-		if (button.text() == "show <") {
-			button.text("show >");
+		if (button.text() == "Show <") {
+			button.text("Show >");
 			document.getElementById("greater_lower").innerHTML = "&lt;"
 			show_greater_testcoverage = false;
 			updateTreemap(current_release);
 		}
 		else {
-			button.text("show <");
+			button.text("Show <");
 			document.getElementById("greater_lower").innerHTML = "&gt;"
 			show_greater_testcoverage = true;
 			updateTreemap(current_release);
