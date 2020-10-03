@@ -433,8 +433,6 @@ d3.select("#btn_add_data")
 	})
 	
 function checkIfDisplay(executions, direction) {
-	console.log("before check: " + current_execution)
-	
 	if (direction == "fw") {
 		while (!executions.includes(parseInt(current_execution))) {
 			current_execution++;

@@ -30,13 +30,15 @@
 
 <div class="slider_coverage" id="slider_coverage">
 	<dl>
-		<dt>Test-Coverage &gt; <span id="value_coverage"></span> %</dt>
+		<dt>Test-Coverage <span id="greater_lower"></span> <span id="value_coverage"></span> %</dt>
 		<br>
         <dt><label for="range_coverage">0 %</label></dt>
         <br><br><br><br>
         <dt> <input id ="range_coverage" type="range" class="slidervert" min="0" max="100" value="0" style="margin-bottom: 10px;"/></dt>
     	<br><br><br><br>
     	<dt>100 %</dt>
+   		<br>
+    	<dt><button class="myButton" type="button" id="btn_switch_testcoverage">Show &lt</button>
     </dl>
 </div>
 
@@ -134,12 +136,15 @@ slider_coverage.oninput = function (){
 	output_coverage.innerHTML = this.value;
 }
 
+var show_greater_testcoverage = true;
+document.getElementById("greater_lower").innerHTML = "&gt;"
+
 /* return 1 if the coverage of one component is higher than 
  * the selected coverage with the range slider */
 function coverage_slider (testcoverage) {
 	slider = parseInt(d3.select("#range_coverage").property("value"));
-	if (testcoverage >= slider) return 1;
-	else if (testcoverage < slider) return 0;
+	if (testcoverage >= slider) return show_greater_testcoverage;
+	else if (testcoverage < slider) return !show_greater_testcoverage;
 }
 
 <!-- configuration panel --> 
@@ -294,6 +299,25 @@ d3.json("./data/systemrelease.json", function(data_release) {
 	d3.select("#range_coverage").on("input", function () {
 		updateTreemap(current_release);
 	});
+	
+	/* change testcoverage greater, lower than x **/
+	d3.select("#btn_switch_testcoverage").on("click", function() {
+
+		var button = d3.select(this);
+		console.log(this);
+		if (button.text() == "show <") {
+			button.text("show >");
+			document.getElementById("greater_lower").innerHTML = "&lt;"
+			show_greater_testcoverage = false;
+			updateTreemap(current_release);
+		}
+		else {
+			button.text("show <");
+			document.getElementById("greater_lower").innerHTML = "&gt;"
+			show_greater_testcoverage = true;
+			updateTreemap(current_release);
+		}
+	})
 		
 	/* press play button */
 	<!-- play button -->
