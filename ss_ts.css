@@ -17,26 +17,33 @@ h2 {
 	border-bottom-right-radios: 5px;
 }
 
-
 #list_suites ul li{
 	list-style: none;
 	padding: 10px;
 	width: 100%;
 	background: #fff;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 	transition: transform 0.7s;
 }
 
 #list_suites ul:hover li{
-	opacity: 0.6;
+	opacity: 0.9;
 }
 
 #list_suites ul li:hover {
-	transform: scale(1.04);
+	transform: scale(1.03);
 	z-index: 100;
-	background: rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0.03);
 	box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+#list_suites ul li li li:hover {
+	transform: scale(1);
+	z-index: 100;
+	background: rgba(0,0,0,0);
+	box-shadow: 0 5px 10px rgba(0,0,0,0);
 	opacity: 1;
+	background-color: white;
 }
 
 #list_cases{
@@ -52,17 +59,18 @@ h2 {
 	background: #fff;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 	transition: transform 0.7s;
-}
-
-#list_cases ul:hover li{
 	opacity: 0.9;
 }
 
 #list_cases ul li:hover {
-	transform: scale(1.04);
+	transform: scale(1.03);
+}
+
+#list_cases ul li li:hover {
 	z-index: 100;
+	transform: scale(1);
 	background: #fff;
-	box-shadow: 0 5px 10px rgba(0,0,0,.1);
+	box-shadow: 0 5px 10px rgba(0,0,0,0);
 	opacity: 1;
 }
 

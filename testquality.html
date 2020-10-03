@@ -266,7 +266,6 @@ d3.json("./data/testexecution.json", function(data_executions) {
 		else {
 			flaky_button.text("Stop Flaky Tests");
 			flaky_timer = d3.timer(lightUp, 1000);
-			
 		}
 	})
 	
@@ -380,42 +379,6 @@ d3.json("./data/testexecution.json", function(data_executions) {
 	}
 })//end reading testexecution data
 
-function showTestsets(current_execution, component, testdata, level){
-	
-	d3.select("#testset_"+level).selectAll("svg").remove();
-	
-	var testsets = null;
-	
-	if (testdata){
-		testsets = getTestsets(testdata, component)
-	}
-	if (testsets != null) {
-	  	
-		for (i in testsets){
-			
-			var testsuites = getTestsuites(testsets[i])
-			var testcases = getTestcases(testsets[i])
-	
-			var data_testcases = []
-			for (j in testcases){
-				data_testcases.push(testcases[j])
-			}
-			for (j in testsuites) {
-				for (k in testsuites[j].testcases) {
-					data_testcases.push(testsuites[j].testcases[k])
-				}
-			}
-			svg_pie = createPiecharts(150, 150, 40, testsets[i], level, data_testcases);
-		}		
-	}
-}
-
-function show_testset_information(testset) {
-	this.idTestset = testset.idTestset;
-    this.testset = testset;
-    var wnd = window.open("./testset.html","");
-}
-
 
 function createNewElement (element, id, type) {
 	var el = document.createElement(element);
@@ -426,10 +389,7 @@ function createNewElement (element, id, type) {
 
 d3.select("#btn_add_data")
 	.on("click", function(){
-		alert("Please make sure you are logged in at GitHub!");
-		var tab = window.open("https://github.com/Klabischnig/swquality/tree/master/data/testquality", 
-		'_blank');
-		tab.focus();  
+		addData(); 
 	})
 	
 function checkIfDisplay(executions, direction) {
@@ -453,9 +413,6 @@ function checkIfDisplay(executions, direction) {
 		return current_execution;
 	}
 }
-
-
-
 
 </script>
 

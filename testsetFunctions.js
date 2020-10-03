@@ -6,6 +6,35 @@ function getTestsets (testdata, component) {
 	}
 }
 
+function showTestsets(current_execution, component, testdata, level){
+	
+	d3.select("#testset_"+level).selectAll("svg").remove();
+	
+	var testsets = null;
+	
+	if (testdata){
+		testsets = getTestsets(testdata, component)
+	}
+	if (testsets != null) {
+	  	
+		for (i in testsets){
+			
+			var testsuites = getTestsuites(testsets[i])
+			var testcases = getTestcases(testsets[i])
+	
+			var data_testcases = []
+			for (j in testcases){
+				data_testcases.push(testcases[j])
+			}
+			for (j in testsuites) {
+				for (k in testsuites[j].testcases) {
+					data_testcases.push(testsuites[j].testcases[k])
+				}
+			}
+			svg_pie = createPiecharts(150, 150, 40, testsets[i], level, data_testcases);
+		}		
+	}
+}
 
 
 function getTestsuites (testset) {
@@ -74,4 +103,11 @@ function color_pie(result){
 	if(result == "failed") return "#c30000";
 	else if (result == "passed") return "#00b300";
 	else if (result == "not executed") return "yellow";
+}
+
+
+function show_testset_information(testset) {
+	this.idTestset = testset.idTestset;
+    this.testset = testset;
+    var wnd = window.open("./testset.html","");
 }
