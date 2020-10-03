@@ -474,7 +474,8 @@ function updateComponents(current_release, root){
       			if (view_coverage) {return d.data.testcoverage/100}
       			else return 1;
       		})
-      		.style("opacity", function(d){ return coverage_slider(d.data.testcoverage)})
+      		.style("fill-opacity", function(d){ return coverage_slider(d.data.testcoverage)})
+      		.style("stroke-opacity", 1)
       		.on("mouseover", mouseover_component)
 			.on("mouseleave", mouseleave_component);
       		
