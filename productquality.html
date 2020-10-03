@@ -476,10 +476,14 @@ function updateComponents(current_release, root){
       		.style("stroke-width", 1)
       		.style("fill", function(d){ return color(d.data.numberOfDefects)})
       		.attr("fill-opacity", function (d) {
-      			if (view_coverage) {return d.data.testcoverage/100}
-      			else return 1;
+      			if (coverage_slider(d.data.testcoverage) == 0 ){
+      				return 0;
+      			}
+      			else {
+      				if (view_coverage) {return d.data.testcoverage/100}
+          			else return 1;
+      			}
       		})
-      		.style("fill-opacity", function(d){ return coverage_slider(d.data.testcoverage)})
       		.style("stroke-opacity", 1)
       		.on("mouseover", mouseover_component)
 			.on("mouseleave", mouseleave_component);
