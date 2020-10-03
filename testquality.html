@@ -90,6 +90,13 @@ var current_execution = 0;
 var checkboxes = [];
 
 
+function defineMinMaxExecutions (executions) {
+	min_execution = d3.min(executions);
+	max_execution = d3.max(executions);
+	document.getElementById("range_execution").min = min_execution;
+	document.getElementById("range_execution").max = max_execution;
+}
+
 function hideTestsets(){
 	//hide elements close buttons and information of testsets
 	document.getElementById("btn_close_unit").style.display="none";
@@ -112,7 +119,8 @@ function showComponents(){
 }
 
 /* set the right values(execution) at the execution slider */
-function updateSlider(current_execution, data){
+function updateSlider(current_execution, data, executions){
+	
 	document.getElementById("range_execution").value = current_execution;
 	value_execution.innerHTML = current_execution;
 	testTimestamp.innerHTML = data.testexecutionStamp;
@@ -145,10 +153,18 @@ d3.json("./data/testexecution.json", function(data_executions) {
 		executions.push(x);
 	}
 	
-	updateExecutions(executions);
+
+	/* define first and last testexecution */
+	defineMinMaxExecutions(executions);
+	/* define current testexecution id,
+	 * start with the last testexecution */
+	current_execution = max_execution;
+		
+	/* set the values of the testexecution slider and outputs */
+	document.getElementById("value_execution").value = current_execution;
 
 	/* init slider */
-	updateSlider(current_execution, data_executions[current_execution-1]);
+	updateSlider(current_execution, data_executions[current_execution-1], executions);
 	
 	/* init checkboxes */
 	for (i in data_executions) {
@@ -173,7 +189,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 	var slider_execution = document.getElementById("range_execution");
 	d3.select("#range_execution").on("input", function () {
 		current_execution = slider_execution.value;
-		updateSlider(current_execution, data_executions[current_execution-1]);
+		updateSlider(current_execution, data_executions[current_execution-1], executions);
 		updateTreemaps(current_execution);
 		hideTestsets();
 		showComponents();
@@ -207,7 +223,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 			current_execution++;
 		}
 		
-		updateSlider(current_execution, data_executions[current_execution-1]);
+		updateSlider(current_execution, data_executions[current_execution-1], executions);
 		updateTreemaps(current_execution);
 		hideTestsets();
 		showComponents();
@@ -223,8 +239,10 @@ d3.json("./data/testexecution.json", function(data_executions) {
 		else {
 			current_execution--;
 		}
-		updateSlider(current_execution, data_executions[current_execution-1]);
+		updateSlider(current_execution, data_executions[current_execution-1], executions);
 		updateTreemaps(current_execution);
+		hideTestsets();
+		showComponents();
 	})
 	
 	/* listen on right arrow button */
@@ -236,8 +254,10 @@ d3.json("./data/testexecution.json", function(data_executions) {
 		else {
 			current_execution++;
 		}
-		updateSlider(current_execution, data_executions[current_execution-1]);
+		updateSlider(current_execution, data_executions[current_execution-1], executions);
 		updateTreemaps(current_execution);
+		hideTestsets();
+		showComponents();
 	})
 	
 	/** listen on flaky button */
@@ -317,8 +337,8 @@ d3.json("./data/testexecution.json", function(data_executions) {
 			}
 			else {
 				executions = newExecutions;
-				updateExecutions(executions);
-				updateSlider(current_execution, data_executions[current_execution-1]);
+				defineMinMaxExecutions(executions);
+				updateSlider(current_execution, data_executions[current_execution-1], executions);
 				updateTreemaps(current_execution);
 			}
 		})
@@ -423,21 +443,7 @@ d3.select("#btn_add_data")
 	})
 	
 
-/* define first and last testexecution */
-function updateExecutions(executions) {
-	
-	min_execution = d3.min(executions);
-	max_execution = d3.max(executions);
 
-	/* define current testexecution id,
-	 * start with the last testexecution */
-	current_execution = max_execution;
-	
-	/* set the values of the testexecution slider and outputs */
-	document.getElementById("range_execution").min = min_execution;
-	document.getElementById("range_execution").max = max_execution;
-	document.getElementById("value_execution").value = current_execution;
-}
 
 
 
