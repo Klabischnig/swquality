@@ -103,16 +103,7 @@ var svg_components = d3.select("#components")
 function color (number_of_defects){
 	var low_risk = parseInt(d3.select("#low_risk").property("value"));
 	var high_risk = parseInt(d3.select("#high_risk").property("value"));
-	
-	if (low_risk < 1) {
-		alert("Please enter a positiv number!");
-		document.getElementById("low_risk").value = 1;
-	}
-	if (high_risk < 1) {
-		alert("Please enter a positiv number!");
-		document.getElementById("high_risk").value = 1;
-	}
-	
+
 	if (number_of_defects < low_risk) {
 		return ("#00b300");//green 
 	}
@@ -379,9 +370,32 @@ d3.json("./data/systemrelease.json", function(data_release) {
 	/* change values in configuration panel */
 	// when the input range changes update value 
 	d3.select("#low_risk").on("input", function() {
+		
+		var high_risk = parseInt(document.getElementById("high_risk").value)
+		
+		if (this.value < 1) {
+			alert("Please enter a positiv number!");
+			this.value = 1;
+		}
+
+		if (parseInt(this.value) >= high_risk) {
+			this.value = high_risk;
+		}
  		updateTreemap(current_release);
  	});
 	d3.select("#high_risk").on("input", function() {
+		
+		var low_risk = parseInt(document.getElementById("low_risk").value)
+		
+		if (this.value < 1) {
+			alert("Please enter a positiv number!");
+			this.value = low_risk + 1;
+		}
+	
+		if (parseInt(this.value) <= low_risk) {
+			this.value = low_risk;
+		}
+		
 		updateTreemap(current_release);
  	});
 	
