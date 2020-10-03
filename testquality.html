@@ -189,6 +189,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 	d3.select("#range_execution").on("input", function () {
 		current_execution = slider_execution.value;
 		updateSlider(current_execution, data_executions[current_execution-1]);
+		current_execution = checkIfDisplay(executions, "fw");
 		updateTreemaps(current_execution);
 		hideTestsets();
 		showComponents();
@@ -221,7 +222,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 		else {
 			current_execution++;
 		}
-		
+		current_execution = checkIfDisplay(executions, "fw");
 		updateSlider(current_execution, data_executions[current_execution-1]);
 		updateTreemaps(current_execution);
 		hideTestsets();
@@ -232,18 +233,8 @@ d3.json("./data/testexecution.json", function(data_executions) {
 	/* listen on left arrow button */
 	var leftArrowButton = d3.select("#btn_prev_ex");
 	leftArrowButton.on("click", function(){
-		current_execution = document.getElementById("range_execution").value
-		if (current_execution == min_execution){
-			current_execution = max_execution;
-		}
-		else {
-			if (!((executions.includes(current_execution-1)))) {
-				while (!(executions.includes(current_execution-1)))  {
-					current_execution = parseInt(current_execution) - 1;
-				} ;
-			}
-			current_execution--;
-		}
+		current_execution--;
+		current_execution = checkIfDisplay(executions, "bw")
 		updateSlider(current_execution, data_executions[current_execution-1]);
 		updateTreemaps(current_execution);
 		hideTestsets();
@@ -253,14 +244,8 @@ d3.json("./data/testexecution.json", function(data_executions) {
 	/* listen on right arrow button */
 	var rightArrowButton = d3.select("#btn_next_ex");
 	rightArrowButton.on("click", function(){
-		current_execution = document.getElementById("range_execution").value
-		if (current_execution == max_execution){
-			current_execution = min_execution;
-		}
-		else {
-			
-			current_execution++;
-		}
+		current_execution++;
+		current_execution = checkIfDisplay(executions, "fw");
 		updateSlider(current_execution, data_executions[current_execution-1]);
 		updateTreemaps(current_execution);
 		hideTestsets();
@@ -345,7 +330,8 @@ d3.json("./data/testexecution.json", function(data_executions) {
 			else {
 				executions = newExecutions;
 				defineMinMaxExecutions(executions);
-				updateSlider(current_execution, data_executions[current_execution-1]);
+				current_execution = checkIfDisplay(executions, "fw");
+				//updateSlider(current_execution, data_executions[current_execution-1]);
 				updateTreemaps(current_execution);
 			}
 		})
@@ -362,17 +348,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 	function updateTreemaps(current_execution){
 
 		d3.selectAll("rect").remove();
-		
-		//first check the checkboxes of the releases
- 		if (!(executions.includes(parseInt(current_execution)))) {
- 			if (parseInt(current_execution) >= parseInt(max_execution)) {
- 				current_execution = min_execution;
- 			}
- 			else {
- 				current_execution++;
- 			}
- 		}
-		
+
 		d3.json("./data/testquality/ex"+current_execution+".json", function(data_releases) {
 			
 			
@@ -456,7 +432,29 @@ d3.select("#btn_add_data")
 		tab.focus();  
 	})
 	
-
+function checkIfDisplay(executions, direction) {
+	console.log("before check: " + current_execution)
+	
+	if (direction == "fw") {
+		while (!executions.includes(parseInt(current_execution))) {
+			current_execution++;
+			if (parseInt(current_execution) > parseInt(max_execution)) {
+				current_execution = min_execution;
+			}
+		}
+		return current_execution;
+	}
+	
+	else if (direction == "bw"){
+		while (!executions.includes(parseInt(current_execution))) {
+			current_execution--;
+			if (parseInt(current_execution) < parseInt(min_execution)) {
+				current_execution = max_execution;
+			}
+		}
+		return current_execution;
+	}
+}
 
 
 

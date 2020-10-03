@@ -546,8 +546,6 @@ function updateMinMaxRelease(releases) {
 }
 
 function checkIfDisplay(releases, direction) {
-	console.log("before check: " + current_release)
-	
 	if (direction == "fw") {
 		while (!releases.includes(parseInt(current_release))) {
 			current_release++;
