@@ -401,6 +401,10 @@ d3.json("./data/systemrelease.json", function(data_release) {
 			this.value = low_risk;
 		}
 		
+		if (parseInt(this.value) >= parseInt(this.max)) {
+			this.value = this.max;
+		}
+		
 		updateTreemap(current_release);
  	});
 	
