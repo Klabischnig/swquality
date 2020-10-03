@@ -119,8 +119,7 @@ function showComponents(){
 }
 
 /* set the right values(execution) at the execution slider */
-function updateSlider(current_execution, data, executions){
-	
+function updateSlider(current_execution, data){
 	document.getElementById("range_execution").value = current_execution;
 	value_execution.innerHTML = current_execution;
 	testTimestamp.innerHTML = data.testexecutionStamp;
@@ -164,7 +163,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 	document.getElementById("value_execution").value = current_execution;
 
 	/* init slider */
-	updateSlider(current_execution, data_executions[current_execution-1], executions);
+	updateSlider(current_execution, data_executions[current_execution-1]);
 	
 	/* init checkboxes */
 	for (i in data_executions) {
@@ -189,7 +188,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 	var slider_execution = document.getElementById("range_execution");
 	d3.select("#range_execution").on("input", function () {
 		current_execution = slider_execution.value;
-		updateSlider(current_execution, data_executions[current_execution-1], executions);
+		updateSlider(current_execution, data_executions[current_execution-1]);
 		updateTreemaps(current_execution);
 		hideTestsets();
 		showComponents();
@@ -223,7 +222,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 			current_execution++;
 		}
 		
-		updateSlider(current_execution, data_executions[current_execution-1], executions);
+		updateSlider(current_execution, data_executions[current_execution-1]);
 		updateTreemaps(current_execution);
 		hideTestsets();
 		showComponents();
@@ -233,13 +232,19 @@ d3.json("./data/testexecution.json", function(data_executions) {
 	/* listen on left arrow button */
 	var leftArrowButton = d3.select("#btn_prev_ex");
 	leftArrowButton.on("click", function(){
+		current_execution = document.getElementById("range_execution").value
 		if (current_execution == min_execution){
 			current_execution = max_execution;
 		}
 		else {
+			if (!((executions.includes(current_execution-1)))) {
+				while (!(executions.includes(current_execution-1)))  {
+					current_execution = parseInt(current_execution) - 1;
+				} ;
+			}
 			current_execution--;
 		}
-		updateSlider(current_execution, data_executions[current_execution-1], executions);
+		updateSlider(current_execution, data_executions[current_execution-1]);
 		updateTreemaps(current_execution);
 		hideTestsets();
 		showComponents();
@@ -248,13 +253,15 @@ d3.json("./data/testexecution.json", function(data_executions) {
 	/* listen on right arrow button */
 	var rightArrowButton = d3.select("#btn_next_ex");
 	rightArrowButton.on("click", function(){
+		current_execution = document.getElementById("range_execution").value
 		if (current_execution == max_execution){
 			current_execution = min_execution;
 		}
 		else {
+			
 			current_execution++;
 		}
-		updateSlider(current_execution, data_executions[current_execution-1], executions);
+		updateSlider(current_execution, data_executions[current_execution-1]);
 		updateTreemaps(current_execution);
 		hideTestsets();
 		showComponents();
@@ -338,7 +345,7 @@ d3.json("./data/testexecution.json", function(data_executions) {
 			else {
 				executions = newExecutions;
 				defineMinMaxExecutions(executions);
-				updateSlider(current_execution, data_executions[current_execution-1], executions);
+				updateSlider(current_execution, data_executions[current_execution-1]);
 				updateTreemaps(current_execution);
 			}
 		})
@@ -356,11 +363,17 @@ d3.json("./data/testexecution.json", function(data_executions) {
 
 		d3.selectAll("rect").remove();
 		
-		/* read json data of current test execution */
-		var current_release = parseInt(document.getElementById("idRelease").innerText)
-		var current_testexecution = parseInt(document.getElementById("value_execution").innerText)
+		//first check the checkboxes of the releases
+ 		if (!(executions.includes(parseInt(current_execution)))) {
+ 			if (parseInt(current_execution) >= parseInt(max_execution)) {
+ 				current_execution = min_execution;
+ 			}
+ 			else {
+ 				current_execution++;
+ 			}
+ 		}
 		
-		d3.json("./data/testquality/release"+current_release+"_ex"+current_testexecution+".json", function(data_releases) {
+		d3.json("./data/testquality/ex"+current_execution+".json", function(data_releases) {
 			
 			
 			/* define root of hierarchical data (components)*/
@@ -385,7 +398,8 @@ d3.json("./data/testexecution.json", function(data_executions) {
 			})	
 			d3.select("#btn_close_acceptance").on("click", function(){
 				buttonClose("acceptance")
-			})	
+			})
+			updateSlider(current_execution, data_executions[current_execution-1]);
 		})	
 	}
 })//end reading testexecution data

@@ -343,10 +343,16 @@ d3.json("./data/systemrelease.json", function(data_release) {
 	/* listen on left arrow button */
 	var leftArrowButton = d3.select("#btn_prev_ex");
 	leftArrowButton.on("click", function(){
+		current_release = document.getElementById("range_release").value;
 		if (current_release == min_release){
 			current_release = max_release;
 		}
 		else {
+			if (!((releases.includes(current_release-1)))) {
+				while (!(releases.includes(current_release-1)))  {
+					current_release = parseInt(current_release) - 1;
+				} ;
+			}
 			current_release--;
 		}
 		updateSlider(current_release);
@@ -357,6 +363,7 @@ d3.json("./data/systemrelease.json", function(data_release) {
 	/* listen on right arrow button */
 	var rightArrowButton = d3.select("#btn_next_ex");
 	rightArrowButton.on("click", function(){
+		current_release = document.getElementById("range_release").value;
 		current_release = document.getElementById("range_release").value;
 		if (current_release == max_release){
 			current_release = min_release;
@@ -392,6 +399,7 @@ d3.json("./data/systemrelease.json", function(data_release) {
 /**************************************** update ******************************************************************/
 	
 	function updateTreemap(current_release){
+ 		//first check the checkboxes of the releases
  		if (!(releases.includes(parseInt(current_release)))) {
  			if (parseInt(current_release) >= max_release) {
  				current_release = min_release;
@@ -399,14 +407,13 @@ d3.json("./data/systemrelease.json", function(data_release) {
  			else {
  				current_release++;
  			}
- 			
  		}
 
 		
  		/* read json data of current release */
  		
 		d3.json("./data/productquality/release"+current_release+".json", function(data_components) {
-			console.log(current_release);
+
 			/* define root of hierarchical data (components)*/
 		 	var root = d3.hierarchy(data_components)
 		 		.sum(function(d){ return 1 })
