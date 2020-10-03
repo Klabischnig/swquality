@@ -88,6 +88,7 @@
 <script>
 
 var checkboxes = [];
+var current_release; 
 
 <!-- treemap -->
 /* set the dimensions and margins of the treemap (components) */
@@ -189,7 +190,7 @@ d3.json("./data/systemrelease.json", function(data_release) {
 		releases.push(parseInt(x));
 	}
 	
-	updateReleases(releases);
+	updateMinMaxRelease(releases);
 	
 	/* define current release id,
 	 * start with the last release */
@@ -262,8 +263,8 @@ d3.json("./data/systemrelease.json", function(data_release) {
 			}
 			else {
 				releases = newReleases;
-				updateReleases(releases);
-				updateSlider(current_release, data_release[current_release-1]);
+				updateMinMaxRelease(releases);
+				current_release = checkIfDisplay(releases, "fw");
 				updateTreemap(current_release);
 			}
 		})
@@ -327,7 +328,7 @@ d3.json("./data/systemrelease.json", function(data_release) {
 		else {
 			current_release++;
 		}
-		
+		current_release = checkIfDisplay(releases, "fw");
 		updateSlider(current_release);
 		updateTreemap(current_release);
 		value_timestamp.innerHTML = getTimestamp(current_release);
@@ -339,19 +340,8 @@ d3.json("./data/systemrelease.json", function(data_release) {
 	/* listen on left arrow button */
 	var leftArrowButton = d3.select("#btn_prev_ex");
 	leftArrowButton.on("click", function(){
-		current_release = document.getElementById("range_release").value;
-		if (current_release == min_release){
-			current_release = max_release;
-		}
-		else {
-			if (!((releases.includes(current_release-1)))) {
-				while (!(releases.includes(current_release-1)))  {
-					current_release = parseInt(current_release) - 1;
-				} ;
-			}
-			current_release--;
-		}
-		updateSlider(current_release);
+		current_release--;
+		current_release = checkIfDisplay(releases, "bw");
 		updateTreemap(current_release);
 		
 	})
@@ -359,15 +349,8 @@ d3.json("./data/systemrelease.json", function(data_release) {
 	/* listen on right arrow button */
 	var rightArrowButton = d3.select("#btn_next_ex");
 	rightArrowButton.on("click", function(){
-		current_release = document.getElementById("range_release").value;
-		current_release = document.getElementById("range_release").value;
-		if (current_release == max_release){
-			current_release = min_release;
-		}
-		else {
-			current_release++;
-		}
-		updateSlider(current_release);
+		current_release++;
+ 		current_release = checkIfDisplay(releases, "fw");
 		updateTreemap(current_release);
 	})
 	
@@ -415,6 +398,7 @@ d3.json("./data/systemrelease.json", function(data_release) {
 		current_release = d3.select("#range_release").property("value");
 		value_timestamp.innerHTML = getTimestamp(current_release);
 		value_version.innerHTML = getVersion(current_release);
+		current_release = checkIfDisplay(releases, "fw");
 		updateTreemap(current_release);
 	})
 		
@@ -422,19 +406,8 @@ d3.json("./data/systemrelease.json", function(data_release) {
 /**************************************** update ******************************************************************/
 	
 	function updateTreemap(current_release){
- 		//first check the checkboxes of the releases
- 		if (!(releases.includes(parseInt(current_release)))) {
- 			if (parseInt(current_release) >= max_release) {
- 				current_release = min_release;
- 			}
- 			else {
- 				current_release++;
- 			}
- 		}
-
 		
  		/* read json data of current release */
- 		
 		d3.json("./data/productquality/release"+current_release+".json", function(data_components) {
 
 			/* define root of hierarchical data (components)*/
@@ -562,7 +535,7 @@ function createNewElement (element, id, type) {
 }
 
 /* define first and last release */
-function updateReleases(releases) {
+function updateMinMaxRelease(releases) {
 	
 	min_release = d3.min(releases);
 	max_release = d3.max(releases);
@@ -570,6 +543,30 @@ function updateReleases(releases) {
 	/* set the values of the release slider */
 	document.getElementById("range_release").min = min_release;
 	document.getElementById("range_release").max = max_release;
+}
+
+function checkIfDisplay(releases, direction) {
+	console.log("before check: " + current_release)
+	
+	if (direction == "fw") {
+		while (!releases.includes(parseInt(current_release))) {
+			current_release++;
+			if (parseInt(current_release) > parseInt(max_release)) {
+				current_release = min_release;
+			}
+		}
+		return current_release;
+	}
+	
+	else if (direction == "bw"){
+		while (!releases.includes(parseInt(current_release))) {
+			current_release--;
+			if (parseInt(current_release) < parseInt(min_release)) {
+				current_release = max_release;
+			}
+		}
+		return current_release;
+	}
 }
 
 
