@@ -16,6 +16,8 @@
 </header>
 <body>
 <p id="testset"></p>
+<p id="testDesignTechnique"></p>
+<p id="testBasis"></p>
 
 <h2>Testsuites</h2>
 <div id="list_suites">
@@ -30,10 +32,13 @@
 </body>
 <script>
 
-//show selected testset id in header
+//show selected testset details in header
 display("Testset: " + window.opener.idTestset);
+
 function display(idTestset) {
     document.getElementById("idTestset").innerHTML = String(idTestset);
+    document.getElementById("testDesignTechnique").innerHTML = String(window.opener.testDesignTechnique);
+    document.getElementById("testBasis").innerHTML = String(window.opener.testBasis);
 }
 
 //get testset from previous window
@@ -46,7 +51,22 @@ if (testset.testsuites){
 	    .data(testset.testsuites)
 	    .enter()
 	    .append("li")
-	    .text(function (d) {return "Testsuite: "+d.idTestsuite})
+	    .text(function (d, i) {
+	    	console.log(d)
+	    	return "Testsuite: "+d.idTestsuite})
+	    .append("p")
+	    .text(function(d) {
+	    	if (d.title) return "Title: " +d.title
+	    })
+	    .append("p")
+	    .text(function (d) { 
+	    	if (d.executionTime) return "Execution time: " + d.executionTime
+	    })
+	    .append("p")
+	    .text(function (d) {
+	    	if (d.testSubProcessObjective) return "Test sub process objective: " + d.testSubProcessObjective
+	    })
+	    .append("p")
 	    .append("ul")
 	    .selectAll("li")
 	    .data(function (d) { return d.testcases})
@@ -116,6 +136,8 @@ function expand(){
 	    	}
     	case 4: 
     		return "Execution Time: " + d;
+    	case 5: 
+    		return "Test objective: " + d;
     	}
     })
 }

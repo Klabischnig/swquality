@@ -107,7 +107,9 @@ function color_pie(result){
 
 
 function show_testset_information(testset) {
-	this.idTestset = testset.idTestset;
-    this.testset = testset;
+ 	this.testset = testset;
+	if (testset.idTestset) this.idTestset = testset.idTestset;
+  	if (testset.testBasis) this.testBasis = testset.testBasis;
+    if (testset.testDesignTechnique) this.testDesignTechnique = testset.testDesignTechnique;
     var wnd = window.open("./testset.html","");
 }
