@@ -257,14 +257,14 @@ d3.json("./data/testexecution.json", function(data_executions) {
 	var flaky_button = d3.select("#btn_flaky");
 	flaky_button.on("click", function(){
 		
-		if(flaky_button.text() == "Stop Flaky Tests"){
+		if(flaky_button.text() == "Hide Flaky Tests"){
 			flaky_button.text("Show Flaky Tests");
 			d3.selectAll("rect").transition().duration(250).style("opacity",1);
 			flaky_timer.stop();
 		}
 		
 		else {
-			flaky_button.text("Stop Flaky Tests");
+			flaky_button.text("Hide Flaky Tests");
 			flaky_timer = d3.timer(lightUp, 1000);
 		}
 	})
